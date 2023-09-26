@@ -26,7 +26,6 @@ clusterGroup:
     
     minio:
       name: minio-operator
-      # namespace: minio-operator
       source: certified-operators
 
     
@@ -47,6 +46,15 @@ clusterGroup:
       project: mlops
       path: charts/all/odh
       kustomize: true
+    
+    minio-tenant:
+      name: myminio
+      namespace: mlops
+      project: mlops
+      path: charts/all/minio/tenant
+      overrides:
+      - names: namespace
+        value: mlops
 
     acm:
       name: acm
