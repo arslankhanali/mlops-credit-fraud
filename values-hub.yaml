@@ -22,9 +22,9 @@ clusterGroup:
       name: opendatahub-operator
       source: community-operators
     
-    codeflare:
-      name: rhods-codeflare-operator
-      source: redhat-operators
+    # codeflare:
+    #   name: rhods-codeflare-operator
+    #   source: redhat-operators
 
   projects:
     - hub
