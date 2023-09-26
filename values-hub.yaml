@@ -24,7 +24,7 @@ clusterGroup:
     
     minio:
       name: minio
-      #source: community-operators
+      source: community-operators
     
     # codeflare:
     #   name: rhods-codeflare-operator
