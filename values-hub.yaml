@@ -22,6 +22,10 @@ clusterGroup:
       name: opendatahub-operator
       source: community-operators
     
+    minio:
+      name: minio
+      #source: community-operators
+    
     # codeflare:
     #   name: rhods-codeflare-operator
     #   source: redhat-operators
