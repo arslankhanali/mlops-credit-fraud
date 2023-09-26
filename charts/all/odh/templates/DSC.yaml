@@ -1,7 +1,7 @@
 apiVersion: datasciencecluster.opendatahub.io/v1alpha1
 kind: DataScienceCluster
 metadata:
-  name: {{ .Values.global.name }}
+  name: dsc-{{ .Values.global.name }}
   namespace: {{ .Values.global.namespace }}
   labels:
     app.kubernetes.io/name: datasciencecluster
