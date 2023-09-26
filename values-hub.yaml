@@ -23,10 +23,10 @@ clusterGroup:
       name: opendatahub-operator
       source: community-operators
     
-    minio:
-      name: minio-operator
-      namespace: minio-operator
-      source: community-operators
+    # minio:
+    #   name: minio-operator
+    #   namespace: minio-operator
+    #   source: community-operators
     
     # codeflare:
     #   name: rhods-codeflare-operator
