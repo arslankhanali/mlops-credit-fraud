@@ -23,8 +23,8 @@ clusterGroup:
       source: community-operators
     
     codeflare:
-      name: codeflare-operator
-      #source: redhat-operators
+      name: rhods-codeflare-operator
+      source: redhat-operators
 
   projects:
     - hub
