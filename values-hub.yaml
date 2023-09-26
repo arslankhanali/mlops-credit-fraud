@@ -9,6 +9,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
+    - minio-operator
     
    
 
