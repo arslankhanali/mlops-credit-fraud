@@ -47,7 +47,7 @@ tenant:
       ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
       volumesPerServer: 4
       ## size specifies the capacity per volume
-      size: 10Gi
+      size: 1Gi
       ## storageClass specifies the storage class name to be used for this pool
       ### If using Amazon Elastic Block Store (EBS) CSI driver
       ### Please make sure to set xfs for "csi.storage.k8s.io/fstype" parameter
