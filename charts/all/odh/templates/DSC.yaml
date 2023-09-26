@@ -11,16 +11,16 @@ metadata:
 spec:
   components:
     codeflare:
-      enabled: false
+      enabled: true
     dashboard:
       enabled: true
     datasciencepipelines:
       enabled: true
     kserve:
-      enabled: false
+      enabled: true
     modelmeshserving:
       enabled: true
     ray:
-      enabled: false
+      enabled: true
     workbenches:
       enabled: true

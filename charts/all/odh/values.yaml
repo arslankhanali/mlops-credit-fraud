@@ -1,2 +1,2 @@
-tree:
-  of: "values"
+global:
+  namespace: mlops
