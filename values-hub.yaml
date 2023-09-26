@@ -26,7 +26,7 @@ clusterGroup:
     
     minio:
       name: minio-operator
-      namespace: minio-operator
+      # namespace: minio-operator
       source: certified-operators
 
     
