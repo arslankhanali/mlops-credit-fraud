@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: minio-route
+  namespace: mlops
+spec:
+  port:
+    targetPort: https-console
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: myminio-console
+    weight: 100
+  wildcardPolicy: None
