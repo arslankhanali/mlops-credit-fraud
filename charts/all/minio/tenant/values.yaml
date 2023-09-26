@@ -75,15 +75,15 @@ tenant:
       ## fsGroupChangePolicy as OnRootMismatch because it can be pretty
       ## expensive for larger volumes with lots of small files.
       securityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
-        fsGroup: 1000
+        runAsUser: 1000860000
+        runAsGroup: 1000860000
+        fsGroup: 1000860000
         fsGroupChangePolicy: "OnRootMismatch"
         runAsNonRoot: true
       ## Configure container security context
       containerSecurityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
+        runAsUser: 1000860000
+        runAsGroup: 1000860000
         runAsNonRoot: true
       ## Configure topology constraints
       topologySpreadConstraints: [ ]
