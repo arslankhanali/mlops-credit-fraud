@@ -9,6 +9,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
+    - minio-operator
    
 
   subscriptions:
@@ -23,7 +24,8 @@ clusterGroup:
       source: community-operators
     
     minio:
-      name: minio
+      name: minio-operator
+      namespace: minio-operator
       source: community-operators
     
     # codeflare:
