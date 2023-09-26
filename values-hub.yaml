@@ -9,7 +9,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
-    - minio-operator
+    
    
 
   subscriptions:
@@ -23,10 +23,11 @@ clusterGroup:
       name: opendatahub-operator
       source: community-operators
     
-    # minio:
-    #   name: minio-operator
-    #   namespace: minio-operator
-    #   source: community-operators
+    minio:
+      name: minio-operator
+      namespace: minio-operator
+      source: certified-operators
+
     
     # codeflare:
     #   name: rhods-codeflare-operator
