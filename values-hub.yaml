@@ -21,6 +21,10 @@ clusterGroup:
     odh:
       name: opendatahub-operator
       source: community-operators
+    
+    codeflare:
+      name: codeflare-operator
+      source: redhat-operators
 
   projects:
     - hub
