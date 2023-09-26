@@ -24,7 +24,7 @@ clusterGroup:
     
     codeflare:
       name: codeflare-operator
-      source: redhat-operators
+      #source: redhat-operators
 
   projects:
     - hub
