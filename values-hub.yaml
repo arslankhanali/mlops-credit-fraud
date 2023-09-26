@@ -8,6 +8,8 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - mlops
+   
 
   subscriptions:
     acm:
@@ -15,13 +17,24 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
+    
+    odh:
+      name: opendatahub-operator
+      source: community-operators
 
   projects:
     - hub
     - config-demo
     - hello-world
+    - mlops
 
   applications:
+    odh:
+          name: odh
+          namespace: mlops
+          project: mlops
+          path: charts/all/odh
+
     acm:
       name: acm
       namespace: open-cluster-management
