@@ -75,7 +75,7 @@ clusterGroup:
     mlflow:
       name: mlflow-server
       namespace: openshift-operators
-      project: openshift-operators
+      # project: openshift-operators
       repoURL: https://strangiato.github.io/helm-charts/
       chart: mlflow-server
       # targetRevision: 1.3.* # using "*" gave me an error
