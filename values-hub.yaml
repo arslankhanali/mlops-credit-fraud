@@ -37,12 +37,12 @@ clusterGroup:
     
     crunchy: 
       name: crunchy-postgres-operator
-      source: redhat-marketplace
+      source: community-operators
       namespace: mlops
     
     odf: 
       name: odf-operator
-      source: redhat-marketplace
+      source: community-operators
       namespace: mlops
     
     # codeflare:
