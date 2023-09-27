@@ -29,9 +29,9 @@ clusterGroup:
       name: minio-operator
       source: certified-operators
     
-    rhods: 
-      name: rhods-operator
-      namespace: redhat-ods-operator
+    # rhods: 
+    #   name: rhods-operator
+    #   namespace: redhat-ods-operator
     
     # codeflare:
     #   name: rhods-codeflare-operator
