@@ -1,3 +1,12 @@
+# Rc
+Added route.yaml in template
+Changes in values.yaml
+  - size: 1Gi
+  - storageClassName: gp3-csi
+  - runAsUser: 1000860000
+  - runAsGroup: 1000860000
+  - fsGroup: 1000860000
+
 # MinIO ![license](https://img.shields.io/badge/license-AGPL%20V3-blue)
 
 [MinIO](https://min.io) is a High Performance Object Storage released under GNU AGPLv3 or later. It is API compatible

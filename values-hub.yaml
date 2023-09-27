@@ -47,14 +47,14 @@ clusterGroup:
       path: charts/all/odh
       kustomize: true
     
-    minio-tenant:
-      name: myminio
-      namespace: mlops
-      project: mlops
-      path: charts/all/minio/tenant
-      overrides:
-      - names: namespace
-        value: mlops
+    # minio-tenant:
+    #   name: myminio
+    #   namespace: mlops
+    #   project: mlops
+    #   path: charts/all/minio/tenant
+    #   overrides:
+    #   - names: namespace
+    #     value: mlops
 
     acm:
       name: acm
