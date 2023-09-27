@@ -10,6 +10,7 @@ clusterGroup:
     - hello-world
     - mlops
     - minio-operator
+    - redhat-ods-operator
     
    
 
@@ -30,7 +31,7 @@ clusterGroup:
     
     rhods: 
       name: redhat-openshift-datascience
-      
+      namespace: redhat-ods-operator
     
     # codeflare:
     #   name: rhods-codeflare-operator
