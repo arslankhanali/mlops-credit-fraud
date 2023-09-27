@@ -35,6 +35,14 @@ clusterGroup:
       source: redhat-operators
       namespace: openshift-operators
     
+    crunchy: 
+      name: crunchy-postgres-operator
+      source: redhat-marketplace
+    
+    odf: 
+      name: odf-operator
+      source: redhat-marketplace
+    
     # codeflare:
     #   name: rhods-codeflare-operator
     #   source: redhat-operators
