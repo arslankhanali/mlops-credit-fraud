@@ -39,7 +39,7 @@ clusterGroup:
     crunchy: 
       name: crunchy-postgres-operator
       source: community-operators
-      namespace: mlops
+      namespace: openshift-operators
     
     odf: 
       name: odf-operator
