@@ -11,6 +11,7 @@ clusterGroup:
     - mlops
     - minio-operator
     - redhat-ods-operator
+    - mlflow
     
    
 
@@ -74,8 +75,8 @@ clusterGroup:
     
     mlflow:
       name: mlflow-server
-      namespace: openshift-operators
-      project: mlops
+      namespace: mlflow
+      project: mlflow
       repoURL: https://strangiato.github.io/helm-charts/
       chart: mlflow-server
       targetRevision: 0.6.* # using "*" gave me an error
