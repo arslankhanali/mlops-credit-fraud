@@ -12,6 +12,7 @@ clusterGroup:
     - minio-operator
     - redhat-ods-operator
     - mlflow
+    - openshift-storage
     
    
 
@@ -43,7 +44,7 @@ clusterGroup:
     odf: 
       name: odf-operator
       source: community-operators
-      namespace: mlops
+      namespace: openshift-storage
     
     # codeflare:
     #   name: rhods-codeflare-operator
