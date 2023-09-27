@@ -38,10 +38,12 @@ clusterGroup:
     crunchy: 
       name: crunchy-postgres-operator
       source: redhat-marketplace
+      namespace: mlops
     
     odf: 
       name: odf-operator
       source: redhat-marketplace
+      namespace: mlops
     
     # codeflare:
     #   name: rhods-codeflare-operator
