@@ -27,7 +27,10 @@ clusterGroup:
     minio:
       name: minio-operator
       source: certified-operators
-
+    
+    rhods: 
+      name: redhat-openshift-datascience
+      
     
     # codeflare:
     #   name: rhods-codeflare-operator
