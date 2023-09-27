@@ -21,17 +21,18 @@ clusterGroup:
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
     
-    odh:
-      name: opendatahub-operator
-      source: community-operators
+    # odh:
+    #   name: opendatahub-operator
+    #   source: community-operators
     
-    minio:
-      name: minio-operator
-      source: certified-operators
+    # minio:
+    #   name: minio-operator
+    #   source: certified-operators
     
-    # rhods: 
-    #   name: rhods-operator
-    #   namespace: redhat-ods-operator
+    rhods: 
+      name: rhods-operator
+      source: redhat-operators
+      namespace: openshift-operators
     
     # codeflare:
     #   name: rhods-codeflare-operator
