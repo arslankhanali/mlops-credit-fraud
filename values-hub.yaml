@@ -30,7 +30,7 @@ clusterGroup:
       source: certified-operators
     
     rhods: 
-      name: redhat-openshift-datascience
+      name: rhods-operator
       namespace: redhat-ods-operator
     
     # codeflare:
