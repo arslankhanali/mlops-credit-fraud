@@ -44,6 +44,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
+    - mlflow
 
   applications:
     # odh:
@@ -75,8 +76,8 @@ clusterGroup:
     
     mlflow:
       name: mlflow-server
-      namespace: mlflow
-      project: mlflow
+      namespace: mlops
+      project: mlops
       repoURL: https://strangiato.github.io/helm-charts/
       chart: mlflow-server
       targetRevision: 0.6.* # using "*" gave me an error
