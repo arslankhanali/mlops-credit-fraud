@@ -45,12 +45,12 @@ clusterGroup:
     - mlops
 
   applications:
-    odh:
-      name: odh
-      namespace: mlops
-      project: mlops
-      path: charts/all/odh
-      kustomize: true
+    # odh:
+    #   name: odh
+    #   namespace: mlops
+    #   project: mlops
+    #   path: charts/all/odh
+    #   kustomize: true
     
     # minio-tenant:
     #   name: myminio
