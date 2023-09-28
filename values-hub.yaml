@@ -10,7 +10,6 @@ clusterGroup:
     - hello-world
     - mlops
     - minio-operator
-    - mlflow
     - openshift-storage
     
    
@@ -26,10 +25,13 @@ clusterGroup:
     #   name: opendatahub-operator
     #   source: community-operators
 
-    odf: 
+    odf-mlops: 
       name: odf-operator
       namespace: mlops
-
+    
+    odf: 
+      name: odf-operator
+      namespace: openshift-storage
     # minio:
     #   name: minio-operator
     #   source: certified-operators
