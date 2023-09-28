@@ -131,7 +131,7 @@ clusterGroup:
       - name: objectStorage.objectBucketClaim.enabled
         value: true
       - name: objectStorage.objectBucketClaim.storageClassName
-        value: "gp3-csi"
+        value: "openshift-storage.noobaa.io"
       - name: objectStorage.objectBucketClaim.bucketclass
         value: "noobaa-default-bucket-classue"
       - name: objectStorage.s3EndpointUrl
