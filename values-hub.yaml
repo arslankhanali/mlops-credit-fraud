@@ -35,10 +35,10 @@ clusterGroup:
     #   name: minio-operator
     #   source: certified-operators
     
-    rhods: 
-      name: rhods-operator
-      # source: redhat-operators
-      namespace: redhat-ods-operator
+    # rhods: 
+    #   name: rhods-operator
+    #   # source: redhat-operators
+    #   namespace: redhat-ods-operator
     
     crunchy: 
       name: crunchy-postgres-operator
