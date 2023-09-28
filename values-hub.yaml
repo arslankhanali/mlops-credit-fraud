@@ -128,11 +128,11 @@ clusterGroup:
       # - name: odhApplication.namespaceOverride
       #   value: redhat-ods-applications
 
-    openshift-data-foundations:
-      name: odf
-      namespace: openshift-storage
-      project: medical-diagnosis
-      path: charts/all/openshift-data-foundations
+    # openshift-data-foundations:
+    #   name: odf
+    #   namespace: openshift-storage
+    #   project: medical-diagnosis
+    #   path: charts/all/openshift-data-foundations
 
     vault:
       name: vault
