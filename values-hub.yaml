@@ -129,7 +129,7 @@ clusterGroup:
       # - name: odhApplication.namespaceOverride
       #   value: redhat-ods-applications
       - name: objectStorage.objectBucketClaim.enabled
-        value: true
+        value: false
       - name: objectStorage.s3EndpointUrl
         value: "http://minio.mlops.svc.cluster.local:9090"
       - name: objectStorage.mlflowBucketName
