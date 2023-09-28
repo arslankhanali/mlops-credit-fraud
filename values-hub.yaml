@@ -38,7 +38,7 @@ clusterGroup:
     rhods: 
       name: rhods-operator
       # source: redhat-operators
-      # namespace: openshift-operators
+      namespace: redhat-ods-operator
     
     crunchy: 
       name: crunchy-postgres-operator
