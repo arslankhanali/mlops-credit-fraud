@@ -10,7 +10,7 @@ clusterGroup:
     - hello-world
     - mlops
     - minio-operator
-    # - redhat-ods-operator
+    - redhat-ods-operator
     - mlflow
     - openshift-storage
     
@@ -37,9 +37,9 @@ clusterGroup:
     
     rhods: 
       name: rhods-operator
-      # #source: redhat-operators
-      # namespace: redhat-ods-operator
-      namespace: openshift-operators
+      # source: redhat-operators
+      namespace: redhat-ods-operator
+      # namespace: openshift-operators
     
     crunchy: 
       name: crunchy-postgres-operator
