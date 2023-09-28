@@ -128,8 +128,8 @@ clusterGroup:
         value: true
       # - name: odhApplication.namespaceOverride
       #   value: redhat-ods-applications
-      - name: objectStorage.objectBucketClaim.enabled
-        value: false
+      # - name: objectStorage.objectBucketClaim.enabled
+      #   value: false
 
     # openshift-data-foundations:
     #   name: odf
