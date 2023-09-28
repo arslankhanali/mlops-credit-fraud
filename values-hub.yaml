@@ -130,6 +130,14 @@ clusterGroup:
       #   value: redhat-ods-applications
       # - name: objectStorage.objectBucketClaim.enabled
       #   value: false
+      - name: objectStorage.s3EndpointUrl
+        values: http://minio.mlops.svc.cluster.local:443
+      - name: objectStorage.mlflowBucketName
+        values: credit-card-fraud
+      - name: objectStorage.s3AccessKeyId
+        values: sahdklas
+      - name: objectStorage.s3SecretAccessKey
+        values: 827163218793127321
 
     # openshift-data-foundations:
     #   name: odf
