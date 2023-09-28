@@ -120,9 +120,10 @@ clusterGroup:
       name: mlflow-server
       namespace: mlops
       project: mlops
-      repoURL: https://strangiato.github.io/helm-charts/
-      chart: mlflow-server
-      targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
+      path: charts/all/mlflow-server
+      # repoURL: https://strangiato.github.io/helm-charts/
+      # chart: mlflow-server
+      # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
       overrides:
       - name: odhApplication.enabled
         value: true
