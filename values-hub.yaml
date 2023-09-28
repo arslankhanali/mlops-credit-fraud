@@ -10,7 +10,6 @@ clusterGroup:
     - hello-world
     - mlops
     - minio-operator
-    - redhat-ods-operator
     - mlflow
     - openshift-storage
     
