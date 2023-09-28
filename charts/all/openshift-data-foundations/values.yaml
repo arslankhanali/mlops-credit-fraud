@@ -37,7 +37,8 @@ odf:
     pvc:
       storage: 2Ti
   storageClass:
-    name: ocs-storagecluster-ceph-rgw
+    # name: ocs-storagecluster-ceph-rgw
+    name: openshift-storage.noobaa.io
     objectStoreName: ocs-storagecluster-cephobjectstore
 
 route:
