@@ -135,7 +135,7 @@ clusterGroup:
       - name: objectStorage.mlflowBucketName
         values: "credit-card-fraud"
       - name: objectStorage.s3AccessKeyId
-        values: "1vQplUtKYdkAwpPcc8n9"
+        values: '1vQplUtKYdkAwpPcc8n9'
       - name: objectStorage.s3SecretAccessKey
         values: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
