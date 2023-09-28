@@ -26,7 +26,11 @@ clusterGroup:
     # odh:
     #   name: opendatahub-operator
     #   source: community-operators
-    
+
+    odf: 
+      name: odf-operator
+      namespace: openshift-storage
+
     # minio:
     #   name: minio-operator
     #   source: certified-operators
@@ -36,19 +40,43 @@ clusterGroup:
       source: redhat-operators
       namespace: openshift-operators
     
-    # crunchy: 
-    #   name: crunchy-postgres-operator
-    #   source: community-operators
-    #   namespace: openshift-operators
+    crunchy: 
+      name: crunchy-postgres-operator
+      source: certified-operators
+      namespace: openshift-operators
     
-    # odf: 
-    #   name: odf-operator
-    #   source: community-operators
-    #   namespace: openshift-storage
+
     
     # codeflare:
     #   name: rhods-codeflare-operator
     #   source: redhat-operators
+    # amqbroker-prod:
+    #   name: amq-broker-rhel8
+    #   namespace: manuela-tst-all
+
+    # amqstreams-prod-dev:
+    #   name: amq-streams
+    #   namespaces: 
+    #   - manuela-data-lake
+    #   - manuela-tst-all
+
+    # camelk-prod-dev:
+    #   name: red-hat-camel-k
+    #   namespaces: 
+    #   - manuela-data-lake
+    #   - manuela-tst-all
+
+    # seldon-prod-dev:
+    #   name: seldon-operator
+    #   namespaces: 
+    #   - manuela-ml-workspace
+    #   - manuela-tst-all
+    #   source: community-operators
+
+    # pipelines:
+    #   name: openshift-pipelines-operator-rh
+    #   source: redhat-operators
+
 
   projects:
     - hub
@@ -99,6 +127,12 @@ clusterGroup:
         value: true
       # - name: odhApplication.namespaceOverride
       #   value: redhat-ods-applications
+
+    openshift-data-foundations:
+      name: odf
+      namespace: openshift-storage
+      project: medical-diagnosis
+      path: charts/all/openshift-data-foundations
 
     vault:
       name: vault
