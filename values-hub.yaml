@@ -113,22 +113,20 @@ clusterGroup:
         jsonPointers:
           - /spec/loggingCA
     
-    # mlflow:
-    #   name: mlflow-server
-    #   namespace: mlops
-    #   project: mlops
-    #   repoURL: https://strangiato.github.io/helm-charts/
-    #   chart: mlflow-server
-    #   targetRevision: 0.6.2 # 0.6.* # using "*" gave me an error
-    #   # extraLocalClusterDomainFields:
-    #   # - app_domain
-    #   overrides:
-    #   - name: odhApplication.enabled
-    #     value: true
-    #   # - name: odhApplication.namespaceOverride
-    #   #   value: redhat-ods-applications
-    #   - name: objectStorage.objectBucketClaim.enabled
-    #     value: false
+    mlflow:
+      name: mlflow-server
+      namespace: mlops
+      project: mlops
+      repoURL: https://strangiato.github.io/helm-charts/
+      chart: mlflow-server
+      targetRevision: 0.6.2 # 0.6.* # using "*" gave me an error
+      overrides:
+      - name: odhApplication.enabled
+        value: true
+      # - name: odhApplication.namespaceOverride
+      #   value: redhat-ods-applications
+      - name: objectStorage.objectBucketClaim.enabled
+        value: false
 
     # openshift-data-foundations:
     #   name: odf
