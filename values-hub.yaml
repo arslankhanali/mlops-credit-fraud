@@ -131,13 +131,13 @@ clusterGroup:
       - name: objectStorage.objectBucketClaim.enabled
         value: false
       - name: objectStorage.s3EndpointUrl
-        values: "http://minio.mlops.svc.cluster.local:443"
+        value: "http://minio.mlops.svc.cluster.local:443"
       - name: objectStorage.mlflowBucketName
-        values: "credit-card-fraud"
+        value: "credit-card-fraud"
       - name: objectStorage.s3AccessKeyId
-        values: '1vQplUtKYdkAwpPcc8n9'
+        value: "1vQplUtKYdkAwpPcc8n9"
       - name: objectStorage.s3SecretAccessKey
-        values: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
+        value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
     # openshift-data-foundations:
     #   name: odf
