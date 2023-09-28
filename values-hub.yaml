@@ -144,7 +144,7 @@ clusterGroup:
         value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
     openshift-data-foundations:
-      name: odf
+      name: openshift-data-foundations
       namespace: openshift-storage
       project: mlops
       path: charts/all/openshift-data-foundations
