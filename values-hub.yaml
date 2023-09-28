@@ -130,6 +130,10 @@ clusterGroup:
       #   value: redhat-ods-applications
       - name: objectStorage.objectBucketClaim.enabled
         value: true
+      - name: objectStorage.objectBucketClaim.storageClassName
+        value: "gpt3-csi"
+      - name: objectStorage.objectBucketClaim.bucketclass
+        value: "trnoobaa-default-bucket-classue"
       - name: objectStorage.s3EndpointUrl
         value: "http://minio.mlops.svc.cluster.local:9090"
       - name: objectStorage.mlflowBucketName
