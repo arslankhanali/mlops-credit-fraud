@@ -119,7 +119,7 @@ clusterGroup:
       project: mlops
       repoURL: https://strangiato.github.io/helm-charts/
       chart: mlflow-server
-      targetRevision: 0.6.* # using "*" gave me an error
+      targetRevision: "*" # 0.6.* # using "*" gave me an error
       # extraLocalClusterDomainFields:
       # - app_domain
       overrides:
