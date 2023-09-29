@@ -10,10 +10,10 @@ clusterGroup:
     - hello-world
     - mlops
     - openshift-storage
-    # - redhat-ods-monitoring
-    # - rhods-notebooks
-    # - redhat-ods-applications
-    # - redhat-ods-operator
+    - redhat-ods-monitoring
+    - rhods-notebooks
+    - redhat-ods-applications
+    - redhat-ods-operator
 
   projects:
     - hub
