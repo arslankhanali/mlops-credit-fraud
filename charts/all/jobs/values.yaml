@@ -26,8 +26,8 @@ rbac:
         - operator.openshift.io
       resources:
         - consoles
-      scope:
-        cluster: true
+      # scope:
+      #   cluster: true
 
 roleBindings:
   - createBinding: true
