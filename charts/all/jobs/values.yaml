@@ -24,13 +24,13 @@ rbac:
     
 rbacpod:
   name: console-pod-restart
-  # namespace: openshift-console
+  namespace: openshift-console
   roles:
     - createRole: true
       resources:
         - pods
       scope:
-        cluster: true
+        cluster: false
       apiGroups:
         - ""
       verbs:
@@ -43,7 +43,7 @@ rbacpod:
   roleBindings:
     - createBinding: true
       scope:
-        cluster: false
+        cluster: true
       subjects:
         kind: ServiceAccount
         apiGroup: ""
