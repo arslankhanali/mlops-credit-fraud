@@ -25,9 +25,9 @@ clusterGroup:
     #   name: opendatahub-operator
     #   source: community-operators
 
-    # odf-mlops: 
-    #   name: odf-operator
-    #   namespace: mlops
+    odf-mlops: 
+      name: odf-operator
+      namespace: mlops
     
     odf: 
       name: odf-operator
