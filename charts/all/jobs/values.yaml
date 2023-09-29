@@ -7,11 +7,11 @@ rbac:
   roles:
     - createRole: true
       resources:
-        - consoles
+        - Console
       scope:
         cluster: true
       apiGroups:
-        - "operator.openshift.io"
+        - "config.openshift.io"
       verbs:
         - "get"
         - "list"
