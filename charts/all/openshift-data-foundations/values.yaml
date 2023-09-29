@@ -71,6 +71,7 @@ rbac:
       createRole: true
       apiGroups:
         - '""'
+        - "operators.coreos.com/v1alpha1"
       scope:
         cluster: true
       resources:
