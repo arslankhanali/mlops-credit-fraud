@@ -142,11 +142,11 @@ clusterGroup:
       # - name: objectStorage.s3SecretAccessKey
       #   value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
-    # openshift-data-foundations:
-    #   name: openshift-data-foundations
-    #   namespace: openshift-storage
-    #   project: mlops
-    #   path: charts/all/openshift-data-foundations
+    openshift-data-foundations:
+      name: openshift-data-foundations
+      namespace: openshift-storage
+      project: mlops
+      path: charts/all/openshift-data-foundations
 
     vault:
       name: vault
