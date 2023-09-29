@@ -1,7 +1,7 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleLink
 metadata:
-  name: {{ .Values.clusterGroup.name }}-mlflow-link
+  name: {{ .Values.namespace }}-mlflow-link
   namespace: {{ .Values.namespace }}
 spec:
   applicationMenu:
