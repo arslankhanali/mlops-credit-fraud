@@ -13,4 +13,4 @@ subjects:
   - apiGroup: ''
     kind: ServiceAccount
     name: console-pod-restart-sa
-    namespace: openshift-console
+    namespace: default
