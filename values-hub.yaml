@@ -132,7 +132,7 @@ clusterGroup:
       - name: odhApplication.enabled
         value: true
       - name: objectStorage.objectBucketClaim.enabled
-        value: true
+        value: false
       # - name: objectStorage.objectBucketClaim.storageClassName
       #   value: "openshift-storage.noobaa.io"
       # - name: objectStorage.objectBucketClaim.bucketclass
