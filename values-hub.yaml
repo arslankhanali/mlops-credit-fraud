@@ -6,24 +6,23 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
-    - config-demo
-    - hello-world
-    - mlops
-    # - minio-operator
-    - openshift-storage
-    - redhat-ods-monitoring
-    - rhods-notebooks
-    - redhat-ods-applications
+    # - config-demo
+    # - hello-world
+    # - mlops
+    # - openshift-storage
+    # - redhat-ods-monitoring
+    # - rhods-notebooks
+    # - redhat-ods-applications
     
   projects:
     - hub
     - config-demo
     - hello-world
-    - mlops
-    - openshift-storage
-    - redhat-ods-monitoring
-    - rhods-notebooks
-    - redhat-ods-applications
+    # - mlops
+    # - openshift-storage
+    # - redhat-ods-monitoring
+    # - rhods-notebooks
+    # - redhat-ods-applications
 
   subscriptions:
     acm:
@@ -31,83 +30,28 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
-    
-    # odh:
-    #   name: opendatahub-operator
-    #   source: community-operators
 
     # odf-mlops: 
     #   name: odf-operator
     #   namespace: mlops
     
-    odf: 
-      name: odf-operator
-      namespace: openshift-storage
-
-    # minio:
-    #   name: minio-operator
+    # odf: 
+    #   name: odf-operator
+    #   namespace: openshift-storage
+    
+    # rhods: 
+    #   name: rhods-operator
+    #   source: redhat-operators
+    #   # namespace: redhat-ods-operator
+    #   # namespace: openshift-operators
+    
+    # crunchy: 
+    #   name: crunchy-postgres-operator
     #   source: certified-operators
+    #   namespace: openshift-operators
     
-    rhods: 
-      name: rhods-operator
-      source: redhat-operators
-      # namespace: redhat-ods-operator
-      # namespace: openshift-operators
-    
-    crunchy: 
-      name: crunchy-postgres-operator
-      source: certified-operators
-      namespace: openshift-operators
-    
-
-    
-    # codeflare:
-    #   name: rhods-codeflare-operator
-    #   source: redhat-operators
-    # amqbroker-prod:
-    #   name: amq-broker-rhel8
-    #   namespace: manuela-tst-all
-
-    # amqstreams-prod-dev:
-    #   name: amq-streams
-    #   namespaces: 
-    #   - manuela-data-lake
-    #   - manuela-tst-all
-
-    # camelk-prod-dev:
-    #   name: red-hat-camel-k
-    #   namespaces: 
-    #   - manuela-data-lake
-    #   - manuela-tst-all
-
-    # seldon-prod-dev:
-    #   name: seldon-operator
-    #   namespaces: 
-    #   - manuela-ml-workspace
-    #   - manuela-tst-all
-    #   source: community-operators
-
-    # pipelines:
-    #   name: openshift-pipelines-operator-rh
-    #   source: redhat-operators
 
   applications:
-    # odh:
-    #   name: odh
-    #   namespace: mlops
-    #   project: mlops
-    #   path: charts/all/odh
-    #   kustomize: true
-    
-    # minio-tenant:
-    #   name: myminio
-    #   namespace: mlops
-    #   project: mlops
-    #   path: charts/all/minio/tenant
-    #   overrides:
-    #   - names: namespace
-    #     value: mlops
-
     acm:
       name: acm
       namespace: open-cluster-management
@@ -119,20 +63,20 @@ clusterGroup:
         jsonPointers:
           - /spec/loggingCA
     
-    mlflow:
-    ## cmd would be line: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
-      name: mlflow-server
-      namespace: mlops
-      project: mlops
-      path: charts/all/mlflow-server
-      # repoURL: https://strangiato.github.io/helm-charts/
-      # chart: mlflow-server
-      # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
-      overrides:
-      - name: odhApplication.enabled
-        value: true
-      - name: objectStorage.objectBucketClaim.enabled
-        value: true
+    # mlflow:
+    # ## cmd would be line: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
+    #   name: mlflow-server
+    #   namespace: mlops
+    #   project: mlops
+    #   path: charts/all/mlflow-server
+    #   # repoURL: https://strangiato.github.io/helm-charts/
+    #   # chart: mlflow-server
+    #   # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
+    #   overrides:
+    #   - name: odhApplication.enabled
+    #     value: true
+    #   - name: objectStorage.objectBucketClaim.enabled
+    #     value: true
       # - name: objectStorage.objectBucketClaim.storageClassName
       #   value: "openshift-storage.noobaa.io"
       # - name: objectStorage.objectBucketClaim.bucketclass
@@ -164,17 +108,17 @@ clusterGroup:
       project: hub
       path: common/golang-external-secrets
 
-    config-demo:
-      name: config-demo
-      namespace: config-demo
-      project: config-demo
-      path: charts/all/config-demo
+    # config-demo:
+    #   name: config-demo
+    #   namespace: config-demo
+    #   project: config-demo
+    #   path: charts/all/config-demo
 
-    hello-world:
-      name: hello-world
-      namespace: hello-world
-      project: hello-world
-      path: charts/all/hello-world
+    # hello-world:
+    #   name: hello-world
+    #   namespace: hello-world
+    #   project: hello-world
+    #   path: charts/all/hello-world
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
