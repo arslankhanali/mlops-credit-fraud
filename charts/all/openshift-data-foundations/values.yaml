@@ -71,12 +71,12 @@ rbac:
       createRole: true
       apiGroups:
         - '""'
-        - "operators.coreos.com/v1alpha1"
+        - "operator.openshift.io/v1"
       scope:
         cluster: true
       resources:
         - nodes
-        - console.operator
+        - console
       verbs:
         - "get"
         - "list"
