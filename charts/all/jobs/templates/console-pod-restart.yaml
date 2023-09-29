@@ -4,7 +4,7 @@ metadata:
   name: restart-console
 annotations:
       argocd.argoproj.io/hook: PostSync
-namespace: {{ .Values.rbacpod.namespace }}
+namespace: openshift-console
 spec:
   template:
     spec:
@@ -20,6 +20,6 @@ spec:
           oc delete pod -n openshift-console -l component=ui
       dnsPolicy: ClusterFirst
       restartPolicy: Never
-      serviceAccount: {{ .Values.rbacpod.name }}-sa
-      serviceAccountName: {{ .Values.rbacpod.name }}-sa
+      serviceAccount: console-pod-restart-sa
+      serviceAccountName: console-pod-restart-sa
       terminationGracePeriodSeconds: 400
