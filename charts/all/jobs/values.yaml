@@ -1,0 +1,19 @@
+lvms:
+  volumeGroup: vgdatamesh
+
+rbac:
+  name: console-plugin
+  namespace: Default
+  roles:
+    - createRole: true
+      resources:
+        - Console
+      scope:
+        cluster: true
+      apiGroups:
+        - "config.openshift.io/v1"
+      verbs:
+        - "get"
+        - "list"
+        - "patch"
+        - "update"

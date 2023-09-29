@@ -103,6 +103,12 @@ clusterGroup:
       project: hub
       path: common/hashicorp-vault
 
+    jobs:
+      name: jobs
+      namespace: Default
+      project: Default
+      path: common/all/jobs
+
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
