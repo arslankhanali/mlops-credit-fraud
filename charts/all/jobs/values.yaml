@@ -17,3 +17,11 @@ rbac:
         - "list"
         - "patch"
         - "update"
+
+roleBindings:
+  - createBinding: true
+    scope:
+      cluster: true
+    subjects:
+      kind: ServiceAccount
+      apiGroup: ""
