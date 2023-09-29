@@ -18,14 +18,16 @@ rbac:
         - "patch"
         - "update"
     - verbs:
-      - get
-      - list
-      - patch
-      - update
+        - "get"
+        - "list"
+        - "patch"
+        - "update"
       apiGroups:
-      - operator.openshift.io
+        - operator.openshift.io
       resources:
-      - consoles
+        - consoles
+      scope:
+        cluster: true
 
 roleBindings:
   - createBinding: true
