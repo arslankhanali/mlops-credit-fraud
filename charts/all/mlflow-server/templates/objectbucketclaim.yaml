@@ -7,7 +7,8 @@ metadata:
     {{- include "mlflow-server.labels" . | nindent 4 }}
   {{- with .Values.objectStorage.objectBucketClaim.annotations }}
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    # argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "10"
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
