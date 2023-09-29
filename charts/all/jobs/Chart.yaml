@@ -15,4 +15,4 @@ dependencies:
   #repository: "https://arslankhanali.github.io/my-helm-charts"
   repository: "https://day0hero.github.io/helm-charts"
   #repository: "https://charts.validatedpatterns.io/"
-  alias: rbac-pod
+  alias: rbacpod

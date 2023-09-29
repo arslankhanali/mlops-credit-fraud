@@ -20,6 +20,6 @@ spec:
           oc delete pod -n openshift-console -l component=ui
       dnsPolicy: ClusterFirst
       restartPolicy: Never
-      serviceAccount: {{ .Values.rbac-pod.name }}-sa
-      serviceAccountName: {{ .Values.rbac-pod.name }}-sa
+      serviceAccount: {{ .Values.rbacpod.name }}-sa
+      serviceAccountName: {{ .Values.rbacpod.name }}-sa
       terminationGracePeriodSeconds: 400
