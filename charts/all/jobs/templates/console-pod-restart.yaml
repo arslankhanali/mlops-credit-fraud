@@ -1,7 +1,7 @@
 kind: Job
 apiVersion: batch/v1
 metadata:
-  name: activate-console-plugins
+  name: restart-console
 annotations:
       argocd.argoproj.io/hook: PostSync
 namespace: {{ .Values.rbacpod.namespace }}
