@@ -27,6 +27,7 @@ spec:
                   echo "$value is already present in /spec/plugins"
               fi
           done
+          oc delete pod -n openshift-console -l component=ui
       dnsPolicy: ClusterFirst
       restartPolicy: Never
       serviceAccount: {{ .Values.rbac.name }}-sa
