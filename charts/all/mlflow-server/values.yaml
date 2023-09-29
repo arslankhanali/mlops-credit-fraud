@@ -67,7 +67,7 @@ objectStorage:
     # -- BucketClass name for the creation of the objectBucketClaim
     bucketclass: noobaa-default-bucket-class
     # -- Additional custom annotations for the objectBucketClaim
-    annotations: {}
+    annotations: {argocd.argoproj.io/hook: "PostSync"}
   # -- URL for s3 endpoint if the objectBucketClaim is disabled
   s3EndpointUrl: ""
   # -- Name of the s3 bucket if the objectBucketClaim is disabled
