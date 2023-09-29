@@ -19,10 +19,10 @@ spec:
 
           # Check if each value is already present in the /spec/plugins array
           for value in "${values[@]}"; do
-              if ! oc get console.operator cluster -o jsonpath='{.spec.plugins[*]}' | grep -q "\<$value\>"; then
+              if ! oc get consoles.operator.openshift.io cluster -o jsonpath='{.spec.plugins[*]}' | grep -q "\<$value\>"; then
                   # Value not present, so execute the oc patch command to add it
                   echo "Adding $value to /spec/plugins"
-                  oc patch console.operator cluster --type json -p "[{\"op\": \"add\", \"path\": \"/spec/plugins/-\", \"value\": \"$value\"}]"
+                  oc patch consoles.operator.openshift.io cluster --type json -p "[{\"op\": \"add\", \"path\": \"/spec/plugins/-\", \"value\": \"$value\"}]"
               else
                   echo "$value is already present in /spec/plugins"
               fi
