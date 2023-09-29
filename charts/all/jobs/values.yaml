@@ -3,7 +3,7 @@ lvms:
 
 rbac:
   name: console-plugin
-  namespace: Default
+  # namespace: Default
   roles:
     - createRole: true
       resources:
