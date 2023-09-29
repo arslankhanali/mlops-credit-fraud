@@ -4,7 +4,7 @@ metadata:
   name: activate-console-plugins
 annotations:
       argocd.argoproj.io/hook: PostSync
-namespace: {{ .Values.rbac-pod.namespace }}
+namespace: {{ .Values.rbacpod.namespace }}
 spec:
   template:
     spec:

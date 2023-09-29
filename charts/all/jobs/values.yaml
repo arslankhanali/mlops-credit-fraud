@@ -1,4 +1,3 @@
-
 rbac:
   name: console-plugin
   # namespace: Default
@@ -16,7 +15,7 @@ rbac:
         - "patch"
         - "update"
     
-rbac-pod:
+rbacpod:
   name: console-pod-restart
   namespace: openshift-console
   roles:
