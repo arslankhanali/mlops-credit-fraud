@@ -6,20 +6,21 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
-    # - config-demo
-    # - hello-world
-    # - mlops
-    # - openshift-storage
+    - config-demo
+    - hello-world
+    - mlops
+    - openshift-storage
     # - redhat-ods-monitoring
     # - rhods-notebooks
     # - redhat-ods-applications
-    
+    # - redhat-ods-operator
+
   projects:
     - hub
     - config-demo
     - hello-world
-    # - mlops
-    # - openshift-storage
+    - mlops
+    - openshift-storage
     # - redhat-ods-monitoring
     # - rhods-notebooks
     # - redhat-ods-applications
@@ -35,20 +36,20 @@ clusterGroup:
     #   name: odf-operator
     #   namespace: mlops
     
-    # odf: 
-    #   name: odf-operator
-    #   namespace: openshift-storage
+    odf: 
+      name: odf-operator
+      namespace: openshift-storage
     
-    # rhods: 
-    #   name: rhods-operator
-    #   source: redhat-operators
-    #   # namespace: redhat-ods-operator
-    #   # namespace: openshift-operators
+    rhods: 
+      name: rhods-operator
+      source: redhat-operators
+      # namespace: redhat-ods-operator
+      # namespace: openshift-operators
     
-    # crunchy: 
-    #   name: crunchy-postgres-operator
-    #   source: certified-operators
-    #   namespace: openshift-operators
+    crunchy: 
+      name: crunchy-postgres-operator
+      source: certified-operators
+      namespace: openshift-operators
     
 
   applications:
