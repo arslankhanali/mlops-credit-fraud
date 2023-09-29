@@ -14,8 +14,15 @@ rbac:
         - "list"
         - "patch"
         - "update"
+  roleBindings:
+  - createBinding: true
+    scope:
+      cluster: true
+    subjects:
+      kind: ServiceAccount
+      apiGroup: ""
     
-rbacpod:
+rbac-pod:
   name: console-pod-restart
   namespace: openshift-console
   roles:
@@ -33,10 +40,10 @@ rbacpod:
         - "update"
         - "delete"
 
-roleBindings:
-  - createBinding: true
-    scope:
-      cluster: true
-    subjects:
-      kind: ServiceAccount
-      apiGroup: ""
+  roleBindings:
+    - createBinding: true
+      scope:
+        cluster: true
+      subjects:
+        kind: ServiceAccount
+        apiGroup: ""
