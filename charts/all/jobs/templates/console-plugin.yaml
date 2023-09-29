@@ -9,7 +9,8 @@ spec:
       containers:
       ## this image is deployed as part of VP so you can run jobs. cli and tools are 2 images that can be used. 
       ##tools has tcpdump,jq,parted,strace utilities
-      - image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest 
+      - name: cli
+        image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest 
         command:
         - /bin/bash
         - -ce
