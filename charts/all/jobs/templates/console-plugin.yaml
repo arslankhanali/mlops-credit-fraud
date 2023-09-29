@@ -12,12 +12,24 @@ spec:
       - name: cli
         image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest 
         command:
-        - /bin/bash
+                - /bin/bash
         - -ce
         - |
-          oc delete pod -n openshift-console -l component=ui
+          values=("mce" "acm" "odf-console")
+
+          # Check if each value is already present in the /spec/plugins array
+          for value in "${values[@]}"; do
+              if ! oc get consoles.operator.openshift.io cluster -o jsonpath='{.spec.plugins[*]}' | grep -q "\<$value\>"; then
+                  # Value not present, so execute the oc patch command to add it
+                  echo "Adding $value to /spec/plugins"
+                  oc patch consoles.operator.openshift.io cluster --type json -p "[{\"op\": \"add\", \"path\": \"/spec/plugins/-\", \"value\": \"$value\"}]"
+              else
+                  echo "$value is already present in /spec/plugins"
+              fi
+          done  
+        
       dnsPolicy: ClusterFirst
       restartPolicy: Never
-      serviceAccount: {{ .Values.rbac-pod.name }}-sa
-      serviceAccountName: {{ .Values.rbac-pod.name }}-sa
+      serviceAccount: {{ .Values.rbac.name }}-sa
+      serviceAccountName: {{ .Values.rbac.name }}-sa
       terminationGracePeriodSeconds: 400
