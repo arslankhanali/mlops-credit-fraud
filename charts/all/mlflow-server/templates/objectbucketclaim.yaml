@@ -11,6 +11,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "10"
     {{- toYaml . | nindent 4 }}
   {{- end }}
+annotations:
+    argocd.argoproj.io/hook: PostSync
+    # argocd.argoproj.io/sync-wave: "10"
 spec:
   additionalConfig:
     bucketclass: noobaa-default-bucket-class
