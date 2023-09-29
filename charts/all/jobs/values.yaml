@@ -1,5 +1,3 @@
-lvms:
-  volumeGroup: vgdatamesh
 
 rbac:
   name: console-plugin
@@ -17,6 +15,24 @@ rbac:
         - "list"
         - "patch"
         - "update"
+    
+rbac-pod:
+  name: console-pod-restart
+  namespace: openshift-console
+  roles:
+    - createRole: true
+      resources:
+        - pods
+      scope:
+        cluster: false
+      apiGroups:
+        - ""
+      verbs:
+        - "get"
+        - "list"
+        - "patch"
+        - "update"
+        - "delete"
 
 roleBindings:
   - createBinding: true
