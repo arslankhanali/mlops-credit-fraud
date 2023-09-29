@@ -11,8 +11,19 @@ clusterGroup:
     - mlops
     # - minio-operator
     - openshift-storage
+    - redhat-ods-monitoring
+    - rhods-notebooks
+    - redhat-ods-applications
     
-   
+  projects:
+    - hub
+    - config-demo
+    - hello-world
+    - mlops
+    - openshift-storage
+    - redhat-ods-monitoring
+    - rhods-notebooks
+    - redhat-ods-applications
 
   subscriptions:
     acm:
@@ -79,13 +90,6 @@ clusterGroup:
     # pipelines:
     #   name: openshift-pipelines-operator-rh
     #   source: redhat-operators
-
-
-  projects:
-    - hub
-    - config-demo
-    - hello-world
-    - mlops
 
   applications:
     # odh:
