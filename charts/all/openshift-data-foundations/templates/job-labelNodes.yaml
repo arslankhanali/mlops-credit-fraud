@@ -15,7 +15,6 @@ spec:
         - -c
         - |
           oc label nodes -l node-role.kubernetes.io/worker= cluster.ocs.openshift.io/openshift-storage='' --overwrite  
-          oc patch console.operator cluster -n openshift-storage --type json -p '[{"op": "add", "path": "/spec/plugins", "value": ["odf-console"]}]'
         name: label-storage-nodes
       dnsPolicy: ClusterFirst
       restartPolicy: Never
