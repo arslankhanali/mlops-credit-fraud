@@ -29,9 +29,9 @@ clusterGroup:
     #   name: odf-operator
     #   namespace: mlops
     
-    # odf: 
-    #   name: odf-operator
-    #   namespace: openshift-storage
+    odf: 
+      name: odf-operator
+      namespace: openshift-storage
 
     # minio:
     #   name: minio-operator
