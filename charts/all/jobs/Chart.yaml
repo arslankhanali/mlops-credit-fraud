@@ -2,7 +2,7 @@ apiVersion: v2
 description: An empty Helm chart
 keywords:
 - pattern
-name: blank
+name: jobs-chart
 version: 0.0.1
 dependencies:
 - name: rbac
