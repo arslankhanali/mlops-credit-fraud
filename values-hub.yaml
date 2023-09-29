@@ -9,8 +9,8 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
-    - minio-operator
-    - openshift-storage
+    # - minio-operator
+    # - openshift-storage
     
    
 
@@ -29,12 +29,13 @@ clusterGroup:
       name: odf-operator
       namespace: mlops
     
-    odf: 
-      name: odf-operator
-      namespace: openshift-storage
-    minio:
-      name: minio-operator
-      source: certified-operators
+    # odf: 
+    #   name: odf-operator
+    #   namespace: openshift-storage
+
+    # minio:
+    #   name: minio-operator
+    #   source: certified-operators
     
     rhods: 
       name: rhods-operator
@@ -85,7 +86,6 @@ clusterGroup:
     - config-demo
     - hello-world
     - mlops
-    - mlflow
 
   applications:
     # odh:
@@ -95,14 +95,14 @@ clusterGroup:
     #   path: charts/all/odh
     #   kustomize: true
     
-    minio-tenant:
-      name: myminio
-      namespace: mlops
-      project: mlops
-      path: charts/all/minio/tenant
-      overrides:
-      - names: namespace
-        value: mlops
+    # minio-tenant:
+    #   name: myminio
+    #   namespace: mlops
+    #   project: mlops
+    #   path: charts/all/minio/tenant
+    #   overrides:
+    #   - names: namespace
+    #     value: mlops
 
     acm:
       name: acm
@@ -124,25 +124,23 @@ clusterGroup:
       # repoURL: https://strangiato.github.io/helm-charts/
       # chart: mlflow-server
       # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
-      overrides:
-      - name: odhApplication.enabled
-        value: true
-      # - name: odhApplication.namespaceOverride
-      #   value: redhat-ods-applications
-      - name: objectStorage.objectBucketClaim.enabled
-        value: true
-      - name: objectStorage.objectBucketClaim.storageClassName
-        value: "openshift-storage.noobaa.io"
-      - name: objectStorage.objectBucketClaim.bucketclass
-        value: "noobaa-default-bucket-classue"
-      - name: objectStorage.s3EndpointUrl
-        value: "http://minio.mlops.svc.cluster.local:9090"
-      - name: objectStorage.mlflowBucketName
-        value: "mlflow"
-      - name: objectStorage.s3AccessKeyId
-        value: "1vQplUtKYdkAwpPcc8n9"
-      - name: objectStorage.s3SecretAccessKey
-        value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
+      # overrides:
+      # - name: odhApplication.enabled
+      #   value: true
+      # - name: objectStorage.objectBucketClaim.enabled
+      #   value: true
+      # - name: objectStorage.objectBucketClaim.storageClassName
+      #   value: "openshift-storage.noobaa.io"
+      # - name: objectStorage.objectBucketClaim.bucketclass
+      #   value: "noobaa-default-bucket-classue"
+      # - name: objectStorage.s3EndpointUrl
+      #   value: "http://minio.mlops.svc.cluster.local:9090"
+      # - name: objectStorage.mlflowBucketName
+      #   value: "mlflow"
+      # - name: objectStorage.s3AccessKeyId
+      #   value: "1vQplUtKYdkAwpPcc8n9"
+      # - name: objectStorage.s3SecretAccessKey
+      #   value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
     # openshift-data-foundations:
     #   name: openshift-data-foundations
