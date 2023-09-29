@@ -10,7 +10,7 @@ clusterGroup:
     - hello-world
     - mlops
     # - minio-operator
-    # - openshift-storage
+    - openshift-storage
     
    
 
@@ -25,9 +25,9 @@ clusterGroup:
     #   name: opendatahub-operator
     #   source: community-operators
 
-    odf-mlops: 
-      name: odf-operator
-      namespace: mlops
+    # odf-mlops: 
+    #   name: odf-operator
+    #   namespace: mlops
     
     # odf: 
     #   name: odf-operator
@@ -40,7 +40,7 @@ clusterGroup:
     rhods: 
       name: rhods-operator
       source: redhat-operators
-      # namespace: redhat-ods-operator
+      namespace: redhat-ods-operator
       # namespace: openshift-operators
     
     crunchy: 
