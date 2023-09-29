@@ -4,7 +4,7 @@ metadata:
   name: restart-console
   annotations:
     argocd.argoproj.io/sync-hook: "PostSync"
-  namespace: openshift-console
+  # namespace: openshift-console
 spec:
   template:
     spec:
