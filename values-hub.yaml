@@ -124,11 +124,11 @@ clusterGroup:
       # repoURL: https://strangiato.github.io/helm-charts/
       # chart: mlflow-server
       # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
-      # overrides:
-      # - name: odhApplication.enabled
-      #   value: true
-      # - name: objectStorage.objectBucketClaim.enabled
-      #   value: true
+      overrides:
+      - name: odhApplication.enabled
+        value: true
+      - name: objectStorage.objectBucketClaim.enabled
+        value: true
       # - name: objectStorage.objectBucketClaim.storageClassName
       #   value: "openshift-storage.noobaa.io"
       # - name: objectStorage.objectBucketClaim.bucketclass
