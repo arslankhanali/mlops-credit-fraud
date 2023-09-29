@@ -29,8 +29,8 @@ spec:
           done
       dnsPolicy: ClusterFirst
       restartPolicy: Never
-      # serviceAccount: {{ .Values.rbac.name }}-sa
-      # serviceAccountName: {{ .Values.rbac.name }}-sa
-      serviceAccount: default
-      serviceAccountName: default
+      serviceAccount: {{ .Values.rbac.name }}-sa
+      serviceAccountName: {{ .Values.rbac.name }}-sa
+      # serviceAccount: default
+      # serviceAccountName: default
       terminationGracePeriodSeconds: 400
