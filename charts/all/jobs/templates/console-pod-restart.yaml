@@ -2,8 +2,8 @@ kind: Job
 apiVersion: batch/v1
 metadata:
   name: restart-console
-annotations:
-  argocd.argoproj.io/sync-hook: "PostSync"
+  annotations:
+    argocd.argoproj.io/sync-hook: "PostSync"
 namespace: openshift-console
 spec:
   template:
