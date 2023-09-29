@@ -42,8 +42,6 @@ clusterGroup:
     
     rhods: 
       name: rhods-operator
-      # source: redhat-operators
-      # namespace: redhat-ods-operator
       namespace: openshift-operators
     
     crunchy: 
