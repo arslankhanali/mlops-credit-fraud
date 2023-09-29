@@ -105,8 +105,8 @@ clusterGroup:
 
     jobs:
       name: jobs
-      namespace: Default
-      project: Default
+      namespace: default
+      project: default
       path: common/all/jobs
 
     golang-external-secrets:
