@@ -7,7 +7,7 @@ rbac:
   roles:
     - createRole: true
       resources:
-        - Consoles
+        - console
       scope:
         cluster: true
       apiGroups:
