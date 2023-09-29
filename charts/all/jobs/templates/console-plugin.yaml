@@ -26,7 +26,7 @@ spec:
               else
                   echo "$value is already present in /spec/plugins"
               fi
-          done
+          done  
           oc delete pod -n openshift-console -l component=ui
       dnsPolicy: ClusterFirst
       restartPolicy: Never
