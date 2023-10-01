@@ -13,10 +13,10 @@ spec:
 #     importPolicy: {}
 #     referencePolicy:
 #       type: Local
-  tags:
-  - name: latest
-    from:
-      kind: DockerImage
-      name: {{ .Values.originalimage }}
-    referencePolicy:
-      type: Source
+#   tags:
+#   - name: latest
+#     from:
+#       kind: DockerImage
+#       name: {{ .Values.originalimage }}
+#     referencePolicy:
+#       type: Source
