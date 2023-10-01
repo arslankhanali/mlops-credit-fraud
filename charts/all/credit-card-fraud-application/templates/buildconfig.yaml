@@ -21,8 +21,3 @@ spec:
       dockerfilePath: Dockerfile
   triggers:
   - type: ImageChange
-    imageChange:
-      from:
-        kind: ImageStreamTag
-        name: {{ .Values.originalimage }}
-        namespace: {{ .Values.namespace }}
