@@ -2,7 +2,9 @@
 - Rhods source(source: certified-operators) was wrong in hub file. gave errors
 - odf app was added otherwise objectbucketclaim in mlflow app gave error. ODf when deployed correctly should create secret and config map.
 - make sure to delete limitrange in credit-card-fraud project after you create the work bench in rhods
-- 
+- With internal route INFERENCE_ENDPOINT=http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
+- With external route INFERENCE_ENDPOINT=https://credit-card-fraud-credit-fraud-model.apps.cluster-7dfg8.7dfg8.sandbox258.opentlc.com/v2/models/credit-card-fraud/infer
+- For buildconfig stuff https://www.tutorialworks.com/openshift-dockerfile/
 
 ```sh
 # Argo password
@@ -16,7 +18,6 @@ echo "Region: us-east-2"
 oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}' 
 oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}' 
 #
-
 ```
 - endpoint needs to start with `http://`
 ![Alt text](images/dataconnection.png)

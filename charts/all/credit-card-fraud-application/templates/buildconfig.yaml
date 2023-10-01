@@ -6,10 +6,6 @@ metadata:
     app: {{ .Values.appName }}
   namespace: {{ .Values.namespace }}
 spec:
-  output:
-    to:
-      kind: ImageStreamTag
-      name: "{{ .Values.appName }}:latest"  # Use the templated value
   source:
     git:
       uri: {{ .Values.uri }}
@@ -19,6 +15,14 @@ spec:
     type: Docker                      
     dockerStrategy:
       dockerfilePath: Dockerfile
+      from:
+        kind: ImageStreamTag       # Use an imagestream tag as 'FROM'. so instead of download image `again` it fetches from IS we created
+        namespace: {{ .Values.namespace }}    # Which project?
+        name: {{ .Values.appName }}-is:latest         # Use the imagestream created above
+  output:
+    to:
+      kind: ImageStreamTag
+      name: "{{ .Values.appName }}:latest"  # Use the templated value
   triggers:
   - type: ImageChange
 #     imageChange:
