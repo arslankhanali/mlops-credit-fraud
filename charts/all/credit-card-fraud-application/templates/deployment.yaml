@@ -1,52 +1,41 @@
-# my-deployment-chart/templates/deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-  #   alpha.image.policy.openshift.io/resolve-names: {{ .Values.resolveNames }}
-  #   app.openshift.io/route-disabled: "{{ .Values.routeDisabled }}"
-  #   app.openshift.io/vcs-ref: ""
-  #   app.openshift.io/vcs-uri: https://github.com/arslankhanali/credit-fraud-detection-demo
-  #   deployment.kubernetes.io/revision: "8"
-  #   image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"credit-fraud-detection-demo:latest","namespace":"credit-fraud-model"},"fieldPath":"spec.template.spec.containers[?(@.name==\"credit-fraud-detection-demo\")].image","pause":"false"}]'
-  #   openshift.io/generated-by: OpenShiftWebConsole
-  # labels:
-    app: {{ .Values.appName }}
-  #   app.kubernetes.io/component: {{ .Values.appName }}
-  #   app.kubernetes.io/instance: {{ .Values.appName }}
-  #   app.kubernetes.io/name: {{ .Values.appName }}
-  #   app.kubernetes.io/part-of: {{ .Values.appName }}-app
-  name: {{ .Values.appName }}
-  namespace: {{ .Values.namespace }}
-spec:
-  # progressDeadlineSeconds: 600
-  replicas: 1
-  # revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      app: {{ .Values.appName }}
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: {{ .Values.appName }}
-        deployment: {{ .Values.appName }}
-    spec:
-      containers:
-        - env:
-            - name: INFERENCE_ENDPOINT
-              value: {{ .Values.inferenceEndpoint }}
-          image: "{{ .Values.appName }}:latest"  # Use the templated value
-          # imagePullPolicy: {{ .Values.imagePullPolicy }}
-          name: {{ .Values.containerName }}
-          # terminationMessagePath: {{ .Values.terminationMessagePath }}
-          # terminationMessagePolicy: {{ .Values.terminationMessagePolicy }}
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-      schedulerName: default-scheduler
-      terminationGracePeriodSeconds: 30
+# # my-deployment-chart/templates/deployment.yaml
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   annotations:
+#   labels:
+#     app: {{ .Values.appName }}
+#   name: {{ .Values.appName }}
+#   namespace: {{ .Values.namespace }}
+# spec:
+#   # progressDeadlineSeconds: 600
+#   replicas: 1
+#   # revisionHistoryLimit: 10
+#   selector:
+#     matchLabels:
+#       app: {{ .Values.appName }}
+#   strategy:
+#     rollingUpdate:
+#       maxSurge: 25%
+#       maxUnavailable: 25%
+#     type: RollingUpdate
+#   template:
+#     metadata:
+#       creationTimestamp: null
+#       labels:
+#         app: {{ .Values.appName }}
+#         deployment: {{ .Values.appName }}
+#     spec:
+#       containers:
+#         - env:
+#             - name: INFERENCE_ENDPOINT
+#               value: {{ .Values.inferenceEndpoint }}
+#           image: "{{ .Values.appName }}:latest"  # Use the templated value
+#           # imagePullPolicy: {{ .Values.imagePullPolicy }}
+#           name: {{ .Values.containerName }}
+#           # terminationMessagePath: {{ .Values.terminationMessagePath }}
+#           # terminationMessagePolicy: {{ .Values.terminationMessagePolicy }}
+#       dnsPolicy: ClusterFirst
+#       restartPolicy: Always
+#       schedulerName: default-scheduler
+#       terminationGracePeriodSeconds: 30
