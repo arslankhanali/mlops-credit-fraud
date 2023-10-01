@@ -6,13 +6,8 @@ metadata:
     app: {{ .Values.appName }}
   namespace: {{ .Values.namespace }}
 spec:
-#   lookupPolicy:
-#     local: false
-#   tags:
-#   - name: {{ .Values.appName }}
-#     importPolicy: {}
-#     referencePolicy:
-#       type: Local
+  lookupPolicy:
+    local: false
   tags:
   - name: latest
     from:
@@ -20,4 +15,4 @@ spec:
       name: {{ .Values.originalimage }}
     importPolicy: {}
     referencePolicy:
-      type: Local
+      type: Source
