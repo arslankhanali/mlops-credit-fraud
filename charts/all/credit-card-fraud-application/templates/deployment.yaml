@@ -25,6 +25,6 @@ spec:
         - name: INFERENCE_ENDPOINT
           value: {{ .Values.inferenceEndpoint }}
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.port }}
           name: http
-          protocol: TCP
+          protocol: {{ .Values.protocol }}
