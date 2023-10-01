@@ -22,7 +22,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: {{ .Values.appName }}:latest  # Use the templated value
+      name: app:latest  # Use the templated value
   triggers:
   - type: ImageChange
     imageChange:
