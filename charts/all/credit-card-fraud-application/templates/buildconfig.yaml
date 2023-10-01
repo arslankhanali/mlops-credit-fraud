@@ -19,8 +19,8 @@ spec:
     type: Docker                      
     dockerStrategy:
       dockerfilePath: Dockerfile
-#   triggers:
-#   - type: ImageChange
+  triggers:
+  - type: ImageChange
 #     imageChange:
 #       from:
 #         kind: ImageStreamTag
