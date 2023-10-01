@@ -1,0 +1,11 @@
+# my-deployment-chart/values.yaml
+appName: credit-fraud-detection-demo
+namespace: credit-fraud-model
+# resolveNames: '*'
+routeDisabled: "false"
+inferenceEndpoint: http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
+image: credit-fraud-detection-demo:latest
+imagePullPolicy: Always
+# containerName: credit-fraud-detection-demo
+# terminationMessagePath: /dev/termination-log
+# terminationMessagePolicy: File

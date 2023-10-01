@@ -9,11 +9,13 @@ clusterGroup:
     - mlops
     - openshift-storage
     - redhat-ods-operator
+    - credit-fraud-model
 
   projects:
     - hub
     - mlops
     - openshift-storage
+    - credit-fraud-model
 
   subscriptions:
     acm:
@@ -81,6 +83,12 @@ clusterGroup:
       namespace: default
       project: default
       path: charts/all/jobs
+
+    credit-fraud-model-app:
+      name: credit-fraud-model-app
+      namespace: credit-fraud-model
+      project: credit-fraud-model
+      path: charts/all/credit-card-fraud-application
 
     golang-external-secrets:
       name: golang-external-secrets
