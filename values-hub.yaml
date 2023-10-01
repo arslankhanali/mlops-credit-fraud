@@ -28,6 +28,7 @@ clusterGroup:
     rhods: 
       name: rhods-operator
       namespace: openshift-operators
+      channel: stable
     
     crunchy: 
       name: crunchy-postgres-operator
