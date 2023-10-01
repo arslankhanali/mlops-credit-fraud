@@ -6,11 +6,11 @@ metadata:
 spec:
   lookupPolicy:
     local: true
-  tags:
-  - name: {{ .Values.appName }}
-    importPolicy: {}
-    referencePolicy:
-      type: Local
+#   tags:
+#   - name: {{ .Values.appName }}
+#     importPolicy: {}
+#     referencePolicy:
+#       type: Local
   tags:
   - name: latest
     from:
