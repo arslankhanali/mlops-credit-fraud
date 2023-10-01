@@ -18,5 +18,6 @@ spec:
     from:
       kind: DockerImage
       name: {{ .Values.originalimage }}
+    importPolicy: {}
     referencePolicy:
       type: Source
