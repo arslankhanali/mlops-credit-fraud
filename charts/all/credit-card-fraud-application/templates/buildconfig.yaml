@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: {{ .Values.appName }}-build
+  name: {{ .Values.appName }}
   labels:
     app: {{ .Values.appName }}
   namespace: {{ .Values.namespace }}
@@ -22,7 +22,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: {{ .Values.appName }}-is:latest  # Use the templated value
+      name: {{ .Values.appName }}:latest  # Use the templated value
   triggers:
   - type: ImageChange
     imageChange:
