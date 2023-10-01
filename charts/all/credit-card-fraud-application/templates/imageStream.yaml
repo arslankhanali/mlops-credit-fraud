@@ -10,6 +10,6 @@ spec:
   - name: latest
     from:
       kind: DockerImage
-      name: python3.10.4
+      name: {{ .Values.originalimage }}
     referencePolicy:
       type: Source
