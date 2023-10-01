@@ -7,11 +7,17 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
     spec:
       containers:
       - name: {{ .Values.appName }}
-        image: {{ .Values.appName }}:latest
+        image: "{{ .Values.appName }}:latest"
         env:
         - name: INFERENCE_ENDPOINT
           value: {{ .Values.inferenceEndpoint }}
-      # Add other container settings, volume mounts, and so on as needed
