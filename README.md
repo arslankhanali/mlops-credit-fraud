@@ -1,3 +1,16 @@
+# RC notes
+- Rhods source(source: certified-operators) was wrong in hub file. gave errors
+- odf app was added otherwise objectbucketclaim in mlflow app gave error. ODf when deployed correctly should create secret and config map.
+- make sure to delete limitrange in credit-card-fraud project after you create the work bench in rhods
+
+```sh
+oc get secret openshift-gitops-cluster -n openshift-gitops -o json | jq -r '.data | with_entries(.value |= @base64d)'
+oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_ACCESS_KEY_ID|@base64d'
+oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_SECRET_ACCESS_KEY|@base64d'
+oc get configmap mlflow-server -n mlops -o yaml | grep BUCKET_HOST
+oc get obc -n mlops -o yaml | grep bucketName
+```
+
 # Multicloud Gitops
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)

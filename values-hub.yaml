@@ -6,24 +6,13 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
-    - config-demo
-    - hello-world
     - mlops
     - openshift-storage
-    - redhat-ods-monitoring
-    - rhods-notebooks
-    - redhat-ods-applications
-    - redhat-ods-operator
 
   projects:
     - hub
-    - config-demo
-    - hello-world
     - mlops
     - openshift-storage
-    # - redhat-ods-monitoring
-    # - rhods-notebooks
-    # - redhat-ods-applications
 
   subscriptions:
     acm:
@@ -31,10 +20,6 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
-
-    # odf-mlops: 
-    #   name: odf-operator
-    #   namespace: mlops
     
     odf: 
       name: odf-operator
@@ -63,7 +48,7 @@ clusterGroup:
           - /spec/loggingCA
     
     mlflow:
-    ## cmd would be line: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
+    ## cmdline would be: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
       name: mlflow-server
       namespace: mlops
       project: mlops
@@ -76,18 +61,6 @@ clusterGroup:
         value: true
       - name: objectStorage.objectBucketClaim.enabled
         value: true
-      # - name: objectStorage.objectBucketClaim.storageClassName
-      #   value: "openshift-storage.noobaa.io"
-      # - name: objectStorage.objectBucketClaim.bucketclass
-      #   value: "noobaa-default-bucket-classue"
-      # - name: objectStorage.s3EndpointUrl
-      #   value: "http://minio.mlops.svc.cluster.local:9090"
-      # - name: objectStorage.mlflowBucketName
-      #   value: "mlflow"
-      # - name: objectStorage.s3AccessKeyId
-      #   value: "1vQplUtKYdkAwpPcc8n9"
-      # - name: objectStorage.s3SecretAccessKey
-      #   value: "EHfgRdr1c2g1gAP9kTcQwx9hqj27aDh0ySUeEcpS"
 
     openshift-data-foundations:
       name: openshift-data-foundations
@@ -112,18 +85,6 @@ clusterGroup:
       namespace: golang-external-secrets
       project: hub
       path: common/golang-external-secrets
-
-    # config-demo:
-    #   name: config-demo
-    #   namespace: config-demo
-    #   project: config-demo
-    #   path: charts/all/config-demo
-
-    # hello-world:
-    #   name: hello-world
-    #   namespace: hello-world
-    #   project: hello-world
-    #   path: charts/all/hello-world
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
