@@ -18,11 +18,11 @@ spec:
       from:
         kind: ImageStreamTag       # Use an imagestream tag as 'FROM'. so instead of download image `again` it fetches from IS we created
         namespace: {{ .Values.namespace }}    # Which project?
-        name: {{ .Values.appName }}-is-app:latest         # Use the imagestream created above
+        name: {{ .Values.appName }}-is:latest         # Use the imagestream created above
   output:
     to:
       kind: ImageStreamTag
-      name: app:latest  # Use the templated value
+      name: {{ .Values.appName }}-is-app:latest  # Use the templated value
   triggers:
   - type: ImageChange
     # imageChange:
