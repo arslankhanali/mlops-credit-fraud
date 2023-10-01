@@ -25,8 +25,8 @@ spec:
       name: "{{ .Values.appName }}:latest"  # Use the templated value
   triggers:
   - type: ImageChange
-#     imageChange:
-#       from:
-#         kind: ImageStreamTag
-#         name: "{{ .Values.appName }}:old"
-#         namespace: {{ .Values.namespace }}
+    imageChange:
+      from:
+        kind: ImageStreamTag
+        name: "{{ .Values.appName }}-is:latest"
+        namespace: {{ .Values.namespace }}
