@@ -12,6 +12,5 @@ spec:
     targetPort: 8080
   selector:
     app: {{ .Values.appName }}
-    deploymentconfig: {{ .Values.appName }}
   sessionAffinity: None
   type: ClusterIP
