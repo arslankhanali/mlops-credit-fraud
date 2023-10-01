@@ -26,7 +26,7 @@ spec:
   triggers:
   - type: ImageChange
     imageChange:
-      from:
-        kind: ImageStreamTag
-        name: "{{ .Values.appName }}-is:latest"
-        namespace: {{ .Values.namespace }}
+    #   from:
+    #     kind: ImageStreamTag
+    #     name: "{{ .Values.appName }}-is:latest"
+    #     namespace: {{ .Values.namespace }}
