@@ -5,11 +5,11 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   lookupPolicy:
-    local: false
-  tags:
-  - name: latest
-    from:
-      kind: DockerImage
-      name: {{ .Values.originalimage }}
-    referencePolicy:
-      type: Source
+    local: true
+#   tags:
+#   - name: latest
+#     from:
+#       kind: DockerImage
+#       name: {{ .Values.originalimage }}
+#     referencePolicy:
+#       type: Source
