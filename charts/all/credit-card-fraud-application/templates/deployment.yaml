@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.appName }}
-        image: {{ .Values.appName }}
+        image: {{ .Values.appName }}:latest
         env:
         - name: INFERENCE_ENDPOINT
           value: {{ .Values.inferenceEndpoint }}
