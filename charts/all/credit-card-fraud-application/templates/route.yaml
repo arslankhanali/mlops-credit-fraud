@@ -6,7 +6,7 @@ metadata:
     app: {{ .Values.appName }}
 spec:
   port:
-    targetPort: 8080-tcp
+    targetPort: {{ .Values.port }}-tcp
   to:
     kind: Service
     name: {{ .Values.appName }}-svc

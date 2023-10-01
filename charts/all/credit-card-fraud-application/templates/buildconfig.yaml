@@ -19,10 +19,10 @@ spec:
     type: Docker                      
     dockerStrategy:
       dockerfilePath: Dockerfile
-  triggers:
-  - type: ImageChange
-    imageChange:
-      from:
-        kind: ImageStreamTag
-        name: "{{ .Values.appName }}:old"
-        namespace: {{ .Values.namespace }}
+#   triggers:
+#   - type: ImageChange
+#     imageChange:
+#       from:
+#         kind: ImageStreamTag
+#         name: "{{ .Values.appName }}:old"
+#         namespace: {{ .Values.namespace }}

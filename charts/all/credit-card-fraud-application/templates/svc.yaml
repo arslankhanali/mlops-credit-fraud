@@ -6,10 +6,10 @@ metadata:
     app: {{ .Values.appName }}
 spec:
   ports:
-  - name: 8080-tcp
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
+  - name: {{ .Values.port }}-tcp
+    port: {{ .Values.port }}
+    protocol: {{ .Values.protocol }}
+    targetPort: {{ .Values.port }}
   selector:
     app: {{ .Values.appName }}
   sessionAffinity: None
