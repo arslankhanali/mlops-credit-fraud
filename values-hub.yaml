@@ -8,6 +8,7 @@ clusterGroup:
     - golang-external-secrets
     - mlops
     - openshift-storage
+    - redhat-ods-operator
 
   projects:
     - hub
