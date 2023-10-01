@@ -6,6 +6,11 @@ metadata:
 spec:
   lookupPolicy:
     local: true
+  tags:
+  - name: {{ .Values.originalimage }}
+    importPolicy: {}
+    referencePolicy:
+      type: Local
 #   tags:
 #   - name: latest
 #     from:

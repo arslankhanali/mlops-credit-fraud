@@ -21,3 +21,7 @@ spec:
         env:
         - name: INFERENCE_ENDPOINT
           value: {{ .Values.inferenceEndpoint }}
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
