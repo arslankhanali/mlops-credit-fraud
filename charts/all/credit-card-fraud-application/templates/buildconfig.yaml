@@ -9,7 +9,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: {{ .Values.appName }}-is  # Use the templated value
+      name: "{{ .Values.appName }}:latest"  # Use the templated value
   source:
     git:
       uri: {{ .Values.uri }}
