@@ -20,4 +20,4 @@ spec:
       name: {{ .Values.originalimage }}
     importPolicy: {}
     referencePolicy:
-      type: Source
+      type: Local
