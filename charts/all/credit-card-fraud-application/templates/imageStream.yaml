@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   lookupPolicy:
-    local: true
+    local: false
 #   tags:
 #   - name: {{ .Values.appName }}
 #     importPolicy: {}
