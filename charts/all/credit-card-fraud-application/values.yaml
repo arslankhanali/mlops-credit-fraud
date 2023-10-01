@@ -5,27 +5,3 @@ uri: https://github.com/arslankhanali/credit-fraud-detection-demo
 contextDir: application
 originalimage: python:3.10.4
 inferenceEndpoint: http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
-
-name: credit
-
-build:
-  namespace: credit-fraud-model
-  source:
-    git:
-      uri: https://github.com/arslankhanali/credit-fraud-detection-demo
-    contextDir: application
-  strategy:
-    dockerStrategy:
-      from:
-        namespace: credit-fraud-model
-        name: credit:latest
-  output:
-    to:
-      name: credit-tools:latest
-
-imageStream:
-  namespace: credit-fraud-model
-  tags:
-    name: latest
-    from:
-      name: image-registry.openshift-image-registry.svc:5000/credit-fraud-model/credit
