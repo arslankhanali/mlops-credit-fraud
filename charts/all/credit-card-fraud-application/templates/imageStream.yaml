@@ -1,7 +1,7 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: name: {{ .Values.appName }}-is
+  name: "{{ .Values.appName }}:latest"
   namespace: {{ .Values.namespace }}
 spec:
   lookupPolicy:
@@ -10,6 +10,6 @@ spec:
   - name: latest
     from:
       kind: DockerImage
-      name: docker.io/library/python3.10.4
+      name: python3.10.4
     referencePolicy:
       type: Source
