@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
       - name: {{ .Values.appName }}
-        image: {{ .Values.appName }}:latest
+        image: image-registry.openshift-image-registry.svc:5000/credit-fraud-model/credit-fraud-detection-demo
+        # image: {{ .Values.appName }}:latest
         env:
         - name: INFERENCE_ENDPOINT
           value: {{ .Values.inferenceEndpoint }}
