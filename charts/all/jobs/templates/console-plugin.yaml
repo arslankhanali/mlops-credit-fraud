@@ -2,6 +2,8 @@ kind: Job
 apiVersion: batch/v1
 metadata:
   name: activate-console-plugins
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 #namespace: openshift-storage
 spec:
   template:
