@@ -7,7 +7,7 @@ spec:
   lookupPolicy:
     local: true
   tags:
-  - name: {{ .Values.originalimage }}
+  - name: {{ .Values.appName }}
     importPolicy: {}
     referencePolicy:
       type: Local
