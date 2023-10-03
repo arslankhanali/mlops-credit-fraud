@@ -76,7 +76,7 @@ clusterGroup:
       # path: charts/all/mlflow-server
       repoURL: https://arslankhanali.github.io/my-helm-charts/
       chart: s2i
-      targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
+      targetRevision: "*" # 0.6.* # using "*" gave me an error
       overrides:
       - name: appName
         value: infapp
