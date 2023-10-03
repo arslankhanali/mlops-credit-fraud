@@ -98,7 +98,9 @@ clusterGroup:
       - name: namespace
         value: infapp
       - name: consoleLink.text
-        value: infapp
+        value: 'infapp'
+      - name: consoleLink.section
+        value: Gradio App 1
 
     vault:
       name: vault
