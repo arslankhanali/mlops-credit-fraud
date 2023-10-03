@@ -91,20 +91,24 @@ clusterGroup:
       project: infapp
       repoURL: https://arslankhanali.github.io/my-helm-charts/
       chart: s2i
-      targetRevision: 0.0.1 # 0.6.* # using "*" gave me an error
+      targetRevision: 0.0.2
       overrides:
       - name: appName
         value: infapp
       - name: namespace
         value: infapp
-      - name: consoleLink[0].text
+      - name: consoleLink.text
         value: 'infapp'
-      - name: consoleLink[0].section
+      - name: consoleLink.section
         value: Gradio App 1
+      - name: environment.env[0].name
+        value: INFERENCE_ENDPOINT
+      - name: environment.env[0].value
+        value: http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
       - name: environment.env[1].name
-        value: INFERENCE_ENDPOINT_1
+        value: testing adding another env
       - name: environment.env[1].value
-        value: INFERENCE_ENDPOINT_1
+        value: testing adding another env
 
 
     vault:
