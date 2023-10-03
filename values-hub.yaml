@@ -35,6 +35,10 @@ clusterGroup:
     #   namespace: openshift-operators
     #   channel: stable
     
+    odh:
+      name: opendatahub-operator
+      source: community-operators
+    
     crunchy: 
       name: crunchy-postgres-operator
       source: certified-operators
