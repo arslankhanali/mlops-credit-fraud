@@ -34,10 +34,10 @@ clusterGroup:
     #   name: rhods-operator
     #   namespace: openshift-operators
     #   channel: stable
-    
-    odh:
-      name: opendatahub-operator
-      source: community-operators
+
+    # odh:
+    #   name: opendatahub-operator
+    #   source: community-operators
     
     crunchy: 
       name: crunchy-postgres-operator
