@@ -26,9 +26,9 @@ clusterGroup:
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
     
-    odf: 
-      name: odf-operator
-      namespace: openshift-storage
+    # odf: 
+    #   name: odf-operator
+    #   namespace: openshift-storage
     
     # rhods: 
     #   name: rhods-operator
