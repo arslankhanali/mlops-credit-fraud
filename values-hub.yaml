@@ -68,20 +68,20 @@ clusterGroup:
       - name: objectStorage.objectBucketClaim.enabled
         value: true
     
-    # infapp:
-    #   name: infapp
-    #   namespace: infapp
-    #   project: infapp
-    #   repoURL: https://arslankhanali.github.io/my-helm-charts/
-    #   chart: s2i
-    #   targetRevision: "*" # 0.6.* # using "*" gave me an error
-    #   overrides:
-    #   - name: appName
-    #     value: infapp
-    #   - name: namespace
-    #     value: infapp
-    #   - name: consoleLink.text
-    #     value: infapp
+    infapp:
+      name: infapp
+      namespace: infapp
+      project: infapp
+      repoURL: https://arslankhanali.github.io/my-helm-charts/
+      chart: s2i
+      targetRevision: 0.0.1 # 0.6.* # using "*" gave me an error
+      overrides:
+      - name: appName
+        value: infapp
+      - name: namespace
+        value: infapp
+      - name: consoleLink.text
+        value: infapp
    
 
     openshift-data-foundations:
