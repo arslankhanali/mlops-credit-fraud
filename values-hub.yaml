@@ -106,9 +106,9 @@ clusterGroup:
       - name: environment.env[0].value
         value: http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
       - name: environment.env[1].name
-        value: testing adding another env
+        value: "testing adding another env"
       - name: environment.env[1].value
-        value: testing adding another env
+        value: "testing adding another env"
 
 
     vault:
