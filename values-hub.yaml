@@ -101,6 +101,11 @@ clusterGroup:
         value: 'infapp'
       - name: consoleLink[0].section
         value: Gradio App 1
+      - name: environment.env[1].name
+        value: INFERENCE_ENDPOINT_1
+      - name: environment.env[1].value
+        value: INFERENCE_ENDPOINT_1
+
 
     vault:
       name: vault
