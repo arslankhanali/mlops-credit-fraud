@@ -52,22 +52,39 @@ clusterGroup:
         kind: ManagedClusterInfo
         jsonPointers:
           - /spec/loggingCA
+  
+    openshift-data-foundations:
+      name: openshift-data-foundations
+      namespace: openshift-storage
+      project: mlops
+      path: charts/all/openshift-data-foundations
     
     mlflow:
-    ## cmdline would be: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
       name: mlflow-server
       namespace: mlops
       project: mlops
       path: charts/all/mlflow-server
-      # repoURL: https://strangiato.github.io/helm-charts/
-      # chart: mlflow-server
-      # targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
       overrides:
       - name: odhApplication.enabled
         value: true
       - name: objectStorage.objectBucketClaim.enabled
         value: true
     
+    jobs:
+      name: jobs
+      namespace: default
+      project: default
+      path: charts/all/jobs
+
+    # credit-fraud-model-app deployed using a local chart
+    credit-fraud-model-app:
+      name: credit-fraud-model-app
+      namespace: credit-fraud-model
+      project: credit-fraud-model
+      path: charts/all/inferenceApp
+
+    # credit-fraud-model-app deployed using a hosted chart in my repo
+    # This app 'infapp' can be commented out. Its not neccessary for the demo
     infapp:
       name: infapp
       namespace: infapp
@@ -82,31 +99,12 @@ clusterGroup:
         value: infapp
       - name: consoleLink.text
         value: infapp
-   
-
-    openshift-data-foundations:
-      name: openshift-data-foundations
-      namespace: openshift-storage
-      project: mlops
-      path: charts/all/openshift-data-foundations
 
     vault:
       name: vault
       namespace: vault
       project: hub
       path: common/hashicorp-vault
-
-    jobs:
-      name: jobs
-      namespace: default
-      project: default
-      path: charts/all/jobs
-
-    credit-fraud-model-app:
-      name: credit-fraud-model-app
-      namespace: credit-fraud-model
-      project: credit-fraud-model
-      path: charts/all/credit-card-fraud-application
 
     golang-external-secrets:
       name: golang-external-secrets
