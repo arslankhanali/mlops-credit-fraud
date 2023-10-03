@@ -10,12 +10,14 @@ clusterGroup:
     - openshift-storage
     - redhat-ods-operator
     - credit-fraud-model
+    - infapp
 
   projects:
     - hub
     - mlops
     - openshift-storage
     - credit-fraud-model
+    - infapp
 
   subscriptions:
     acm:
@@ -65,6 +67,24 @@ clusterGroup:
         value: true
       - name: objectStorage.objectBucketClaim.enabled
         value: true
+    
+    infapp:
+    ## cmdline would be: helm upgrade -i mlflow-server strangiato/mlflow-server --set objectStorage.objectBucketClaim.enabled=false
+      name: infapp
+      namespace: infapp
+      project: infapp
+      # path: charts/all/mlflow-server
+      repoURL: https://arslankhanali.github.io/my-helm-charts/
+      chart: s2i
+      targetRevision: 0.6.* # 0.6.* # using "*" gave me an error
+      overrides:
+      - name: appName
+        value: infapp
+      - name: namespace
+        value: infapp
+      - name: consoleLink.text
+        value: infapp
+   
 
     openshift-data-foundations:
       name: openshift-data-foundations

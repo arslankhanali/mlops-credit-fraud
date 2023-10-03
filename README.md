@@ -1,10 +1,12 @@
 # RC notes
-- Rhods source(source: certified-operators) was wrong in hub file. gave errors
+- Rhods source(source: certified-operators) was wrong in hub file. gave errors. Rhods requires `redhat-ods-operator` namespace.
 - odf app was added otherwise objectbucketclaim in mlflow app gave error. ODf when deployed correctly should create secret and config map.
-- make sure to delete limitrange in credit-card-fraud project after you create the work bench in rhods
+- make sure to delete limitrange in credit-card-fraud project after you create the work bench in rhods. otherwise workbench gets stuck in pending state.
 - With internal route INFERENCE_ENDPOINT=http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer
 - With external route INFERENCE_ENDPOINT=https://credit-card-fraud-credit-fraud-model.apps.cluster-7dfg8.7dfg8.sandbox258.opentlc.com/v2/models/credit-card-fraud/infer
 - For buildconfig stuff https://www.tutorialworks.com/openshift-dockerfile/
+- created 2 imagestreams. one is base with python, other is resultant IS from BC.
+- Should convert app deployment chart to general helm chart
 
 ```sh
 # Argo password
