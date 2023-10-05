@@ -37,6 +37,7 @@ The model we will build is a Credit Card Fraud Detection model, which predicts i
 
 ## Deploying the demo
 Following commands will take about 15-20 minutes
+>**Validated pattern will be deployed** 
 ```sh
 git clone https://github.com/arslankhanali/mlops-credit-fraud
 cd mlops-credit-fraud
@@ -46,7 +47,7 @@ podman machine start
 ```
 Finished Installation will look like:
 ![Alt text](images/installation.png)
-
+>**TA DA!!! Everything you need is already deplyed** 
 Access installed components from UI:  
 ![Alt text](images/menu.png)
 
