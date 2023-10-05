@@ -234,11 +234,11 @@ Click on "Internal Service" in the same row to see the endpoints, we will need t
 
 ### 6: Access the model application
 The model application is a visual interface for interacting with the model. You can use it to send data to the model and get a prediction of whether a transaction is fraudulent or not.   
-It is deployed in `credit-fraud-model` project.  
+It is deployed in `inferencing-app` project.  
 You can access the model application from the 9box short-cut on top right in openshift console .  `Inferencing App`
 
 #### Check the `INFERENCE_ENDPOINT` env variable value
-Go to https://your-uri/ns/credit-fraud-model/deployments/credit-fraud-detection-demo/environment.  
+Go to https://your-uri/ns/inferencing-app/deployments/credit-fraud-detection-demo/environment.  
 Make sure correct INFERENCE_ENDPOINT value is set. In my case it is `http://modelmesh-serving.credit-fraud-model:8008/v2/models/credit-card-fraud/infer`
 
 #### You can get this value from
