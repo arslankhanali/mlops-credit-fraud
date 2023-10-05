@@ -48,7 +48,7 @@ Access installed components from UI:
 ![Alt text](images/menu.png)
 
 ### 1: Get the MLFlow Route using command-line
-Alternatively, you can use the OC command to get the hostname through:  
+You can use the OC command to get the hostname through:  
 `oc get svc mlflow-server -n mlops -o go-template --template='{{.metadata.name}}.{{.metadata.namespace}}.svc.cluster.local{{println}}'`  
 
 The port you will find with: `oc get svc mlflow-server -n mlops -o yaml` 
@@ -75,7 +75,7 @@ There are a few important settings here that we need to set:
 - **Notebook Image:** Standard Data Science
 - **Deployment Size:** Small
 - **Environment Variable:** Add a new one that's a **Config Map -> Key/value** and enter 
-    - `oc get service mlflow-server -n mlops -o go-template --template='http://{{.metadata.name}}.{{.metadata.namespace}}.svc.cluster.local:8080{{println}}' `
+    - Get value by running: `oc get service mlflow-server -n mlops -o go-template --template='http://{{.metadata.name}}.{{.metadata.namespace}}.svc.cluster.local:8080{{println}}' `
     - **Key:** `MLFLOW_ROUTE` 
     - **Value:** `http://<route-to-mlflow>:<port>`, replacing `<route-to-mlflow>` and `<port>` with the route and port that we found in [step one](#11-mlflow-route-through-the-visual-interface).  In my case it is `http://mlflow-server.mlflow.svc.cluster.local:8080`.
 - **Cluster Storage:** Create new persistent storage - I call it "Credit Fraud Storage" and set the size to 20GB.
@@ -225,47 +225,11 @@ You can see the status here:
 
 Click on "Internal Service" in the same row to see the endpoints, we will need those when we deploy the model application.
 
-**[Optional] MLFlow Serving**:
-> **!!! warning "This section is optional"**
-    This section explains how to use MLFlow Serving instead of RHODS Model Serving.  
-    We recommend using RHODS Model Serving as it scales better. However, if you quickly want to get a model up and running for testing, this would be an easy way.
-
-To use MLFlow serving, simply deploy an application which loads the model straight from MLFlow.
-You can find the model application code for using MLFlow serving in the "application_mlflow_serving" folder in the GitHub repository you cloned in [step 3](#3-train-the-model).
-
-If you look inside `model_application_mlflow_serve.py` you are going to see a few particularly important lines of code:
-```
-# Get a few environment variables. These are so we can:
-# - get data from MLFlow
-# - Set server name and port for Gradio
-MLFLOW_ROUTE = os.getenv("MLFLOW_ROUTE")
-...
-
-# Connect to MLFlow using the route.
-mlflow.set_tracking_uri(MLFLOW_ROUTE)
-
-# Specify what model and version we want to load, and then load it.
-model_name = "DNN-credit-card-fraud"
-model_version = 1
-model = mlflow.pyfunc.load_model(
-    model_uri=f"models:/{model_name}/{model_version}"
-)
-```
-
-Here is where we set up everything that's needed for loading the model from MLFlow. The environment variable MLFLOW_ROUTE is set in the Dockerfile.
-You can also see that we specifically load version 1 of the model called "DNN-credit-card-fraud" from MLFlow. This makes sense since we only ran the model once, but is easy to change if any other version or model should go into production
-
-Follow the steps of the [next section](#6-deploy-the-model-application) to see how to deploy an application, but when given the choice for "Context dir" and "Environment variables (runtime only)", use these settings instead:
-
-- **Context dir:** "/model_application_mlflow_serve"
-- **Environment variables (runtime only)** fields:
-    - **Name**: `MLFLOW_ROUTE`
-    - **Value**: The MLFlow route from [step one](#11-mlflow-route-through-the-visual-interface) (`http://mlflow-server.mlflow.svc.cluster.local:8080` for example)
 
 ### 6: Access the model application
 The model application is a visual interface for interacting with the model. You can use it to send data to the model and get a prediction of whether a transaction is fraudulent or not.   
 It is deployed in `credit-fraud-model` project.  
-You can access the model application from the short cut.  
+You can access the model application from the 9box short-cut on top right in openshift console .  `Inferencing App`
 
 #### Check the `INFERENCE_ENDPOINT` env variable value
 Go to https://your-uri/ns/credit-fraud-model/deployments/credit-fraud-detection-demo/environment.  
