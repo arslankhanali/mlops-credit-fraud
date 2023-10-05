@@ -3,8 +3,8 @@
 [GitHub Source](https://github.com/red-hat-data-services/credit-fraud-detection-demo)
 
 # Introduction
->**This deployment is based on validated pattern framework that uses GitOps to easily provision all operators and apps.** 
->**This greatly reduces the time to provision everything manually.** 
+This deployment is based on `validated pattern framework` that uses GitOps to easily provision all operators and apps
+This greatly reduces the time to provision everything manually
 ## Pre-requisites
 
 - Podman 
@@ -48,8 +48,9 @@ podman machine start
 Finished Installation will look like:
 ![Alt text](images/installation.png)
    
-Access installed components from UI:   
->**TA DA!!! Everything you need is already deplyed**   
+  
+TA DA!!! Everything you need is already deplyed!  
+Access installed components from UI: 
 ![Alt text](images/menu.png)
 
 ### 1: Get the MLFlow Route using command-line
