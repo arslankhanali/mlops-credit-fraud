@@ -47,8 +47,9 @@ podman machine start
 ```
 Finished Installation will look like:
 ![Alt text](images/installation.png)
->**TA DA!!! Everything you need is already deplyed** 
-Access installed components from UI:  
+   
+Access installed components from UI:   
+>**TA DA!!! Everything you need is already deplyed**   
 ![Alt text](images/menu.png)
 
 ### 1: Get the MLFlow Route using command-line
