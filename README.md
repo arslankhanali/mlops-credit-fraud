@@ -2,6 +2,9 @@
 
 [GitHub Source](https://github.com/red-hat-data-services/credit-fraud-detection-demo)
 
+# Introduction
+This deployment is based on validated pattern framework that uses GitOps to easily provision all operators and apps.  
+This greatly reduces the time to provision everything manually.  
 ## Pre-requisites
 
 - Podman 
