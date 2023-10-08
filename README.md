@@ -214,8 +214,15 @@ Then we will configure a model server, which will serve our models.
 
 ![Configure Model Server](img/Configure_Model_Server.png)
 
-Just check the 'Make deployed available via an external route' checkbox and then press "Configure" at the bottom.
 
+#### Add Model Server
+Model server name     = credit card fraud  
+Serving runtime       = OpenVINO Model Server  
+Model server replicas = 1  
+Model server size     = Small  
+Check the `Make deployed models available through an external route` box if you want to access model externally. Not needed in our case.  
+
+#### Deploy Model
 Finally, we will deply the model, to do that, press the "Deploy model" button which is in the same place that "Configure Model" was before.  
 We need to fill out a few settings here:
 
