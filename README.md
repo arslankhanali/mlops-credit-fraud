@@ -96,7 +96,7 @@ Open the workbench and login if needed.
 
 ### 3: Train the model
 When inside the workbench (Jupyter), we are going to clone a GitHub repository which contains everything we need to train (and run) our model.  
-You can clone the GitHub repository by pressing the GitHub button in the left side menu (see image), then select "Clone a Repository" and enter this GitHub URL: `https://github.com/arslankhanali/credit-fraud-detection-demo`
+You can clone the GitHub repository by pressing the GitHub button in the left side menu (see image), then select "Clone a Repository" and enter this GitHub URL: [https://github.com/red-hat-data-services/credit-fraud-detection-demo](https://github.com/red-hat-data-services/credit-fraud-detection-demo) 
 
 ![Jupyter](img/Jupyter.png)
 
@@ -185,8 +185,7 @@ This data connection connects us to a storage we can load our models from.
 Here we need to fill out a few details. These are all assuming that you set up MLFlow according to this [guide](/tools-and-applications/mlflow/mlflow/) and have it connected to ODF. If that's not the case then enter the relevant details for your usecase.
 Copy the code section below and run it all to find your values.  
 ```sh
-# DATA CONNECTIONS values
-echo ==========mlflow-connection===========
+echo "==========mlflow-connection==========="
 echo "Name \nmlflow-connection"
 echo AWS_ACCESS_KEY_ID
 oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_ACCESS_KEY_ID|@base64d'
@@ -197,8 +196,7 @@ echo AWS_S3_ENDPOINT
 oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}' 
 echo AWS_S3_BUCKET
 oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}' 
-echo ==========mlflow-connection===========
-#
+echo "==========mlflow-connection==========="
 ```
 
 Then press "Add data connection".  
