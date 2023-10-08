@@ -195,7 +195,8 @@ echo AWS_S3_ENDPOINT
 oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}'
 echo "AWS_DEFAULT_REGION \nus-east-2" 
 echo AWS_S3_BUCKET
-oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}' 
+oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}'
+echo "Connected workbench \nCredit Fraud Model"
 echo "==========mlflow-connection==========="
 ```
 
