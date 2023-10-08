@@ -185,19 +185,25 @@ This data connection connects us to a storage we can load our models from.
 Here we need to fill out a few details. These are all assuming that you set up MLFlow according to this [guide](/tools-and-applications/mlflow/mlflow/) and have it connected to ODF. If that's not the case then enter the relevant details for your usecase.
 Copy the code section below and run it all to find your values.  
 ```sh
-echo "==========mlflow-connection==========="
+echo "==========Data connections Start==========="
 echo "Name \nmlflow-connection"
+echo
 echo AWS_ACCESS_KEY_ID
 oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_ACCESS_KEY_ID|@base64d'
+echo
 echo AWS_SECRET_ACCESS_KEY
 oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_SECRET_ACCESS_KEY|@base64d'
+echo
 echo AWS_S3_ENDPOINT
 oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}'
+echo
 echo "AWS_DEFAULT_REGION \nus-east-2" 
+echo
 echo AWS_S3_BUCKET
 oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}'
+echo
 echo "Connected workbench \nCredit Fraud Model"
-echo "==========mlflow-connection==========="
+echo "==========Data connections End==========="
 ```
 
 Then press "Add data connection".  
