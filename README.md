@@ -233,6 +233,7 @@ We need to fill out a few settings here:
     - **Folder path**: This is the full path we can see in the MLFlow interface from the end of the [previous section](#4-view-the-model-in-mlflow). In my case it's `1/b86481027f9b4b568c9efa3adc01929f/artifacts/models/`.  
     Beware that we only need the last part, which looks something like: `1/..../artifacts/models/`  
     > Note: `models` not `model`  
+    
 ![MLFlow Model Path](img/MLFlow_Model_Path.png)
 
 ![Deployment Model Options](img/Deployment_Model_Options.png)
