@@ -191,9 +191,9 @@ echo AWS_ACCESS_KEY_ID
 oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_ACCESS_KEY_ID|@base64d'
 echo AWS_SECRET_ACCESS_KEY
 oc get secrets mlflow-server -n mlops -o json | jq -r '.data.AWS_SECRET_ACCESS_KEY|@base64d'
-echo "AWS_DEFAULT_REGION \nus-east-2" # in my case
 echo AWS_S3_ENDPOINT
-oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}' 
+oc get configmap mlflow-server -n mlops -o go-template --template='http://{{.data.BUCKET_HOST}}{{println}}'
+echo "AWS_DEFAULT_REGION \nus-east-2" 
 echo AWS_S3_BUCKET
 oc get configmap mlflow-server -n mlops -o go-template --template='{{.data.BUCKET_NAME}}{{println}}' 
 echo "==========mlflow-connection==========="
