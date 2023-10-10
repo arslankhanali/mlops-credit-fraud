@@ -65,8 +65,8 @@ clusterGroup:
       project: mlops
       path: charts/all/mlflow-server
       overrides:
-      - name: odhApplication.enabled
-        value: true
+      # - name: odhApplication.enabled
+      #   value: true
       - name: objectStorage.objectBucketClaim.enabled
         value: true
     
