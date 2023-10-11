@@ -96,7 +96,8 @@ Open the workbench and login if needed.
 
 ### 3: Train the model
 When inside the workbench (Jupyter), we are going to clone a GitHub repository which contains everything we need to train (and run) our model.  
-You can clone the GitHub repository by pressing the GitHub button in the left side menu (see image), then select "Clone a Repository" and enter this GitHub URL: [https://github.com/red-hat-data-services/credit-fraud-detection-demo](https://github.com/red-hat-data-services/credit-fraud-detection-demo) 
+You can clone the GitHub repository by pressing the GitHub button in the left side menu (see image), then select "Clone a Repository" and enter this GitHub URL: 
+[https://github.com/arslankhanali/credit-fraud-detection-demo ](https://github.com/arslankhanali/credit-fraud-detection-demo)
 
 ![Jupyter](img/Jupyter.png)
 
