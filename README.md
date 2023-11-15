@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection Demo using MLFlow and Red Hat OpenShift Data Science
 
-[GitHub Source](https://github.com/red-hat-data-services/credit-fraud-detection-demo)
+The use case that has been converted to a validated pattern is taken from red-hat-data-services repo on github. [link here](https://github.com/red-hat-data-services/credit-fraud-detection-demo)
 
 # Introduction
 This deployment is based on `validated pattern framework` that uses GitOps to easily provision all operators and apps
